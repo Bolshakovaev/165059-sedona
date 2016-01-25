@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Седона</title>
+    <!-- Пример подключения стилей из папки css -->
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <header class="main-header">
+      <nav class="main-navigation">
+        <ul>
+          <li> <a href="#">Информация</a></li>
+          <li> <a href="#">Фото и видео</a></li>
+            <img src="http://placehold.it/150x100" alt="City of Sedona">
+          <li><a href="#">Карта штата</a></li>
+          <li><a href="#">Гостиницы</a></li>
+        </ul>
+       </nav>           
+    </header>  
+      <div class="hotel-description"> <!--тут нужен div или класс можно сразу задать в теге form?-->
+       <form action="#">
+         <span>инфраструктура:</span><br><!--тут нормально использовать span и br или использовать, например, h3 лучше?-->
+           <input type="checkbox" id="pool"><label for="check1">бассейн</label><br>
+           <input type="checkbox" id="parking"><label for="check2">парковка</label><br>
+           <input type="checkbox" id="wifi"><label for="check3">wi-fi</label>  
+       </form> 
+      <form action="#">
+         <span>тип жилья:</span><br>
+           <input type="checkbox" id="hotel"><label for="check1">гостиница</label><br>
+           <input type="checkbox" id="motel"><label for="check2">мотель</label><br>
+           <input type="checkbox" id="apartements"><label for="check3">апартаменты</label>  
+       </form> 
+      <form action="#">
+         <span>стоимость в сутки (р):</span><br>
+          <table><!--тут можно сделать таблицу или это усложнение кода?-->
+          <tr>
+              <th> от 0</th>
+              <th> до 3000</th>
+          </tr>
+          </table>
+          <!--как нарисовать линейку??-->
+           <input type="submit" value="Показать">
+       </form> 
+      </div>      
+      <div class="sorting">
+        <span class="sorting-results">найдено:3</span>
+        <span class="sorting-type">сортировка:</span>
+        <ul class="sorting-items">
+         <li>по цене</li>
+         <li>по типу</li>
+         <li>по рейтингу</li>  
+        </ul>    <!--а как потом задается настоящая сортировка, расположение в определенном порядке по какому-то критерию?-->  
+      </div>
+          <!--ромбики-->
+      <section class="hotel-results">
+      <ul>
+          <li class="hotel">
+              <span class="hotel-name">amara resort & spa</span>
+              <img src="http://placehold.it/150x100" alt="amara">
+              <table class="hotel-description"><!--тут можно сделать таблицу или это усложнение кода?-->
+                <tr>
+                 <th> гостиница</th>
+                 <th> от 3500 р.</th>
+                </tr>
+              </table>
+              <a href="#" type="btn">подробнее</a>
+              <a href="#" type="btn">забронировать</a>
+              <img src="http://placehold.it/150x100" alt="звездочки">
+              <div class="hotel-rating">рейтинг</div>
+          </li>
+          <li class="hotel">
+              <span class="hotel-name">desert quail inn</span>
+              <img src="http://placehold.it/150x100" alt="desert">
+              <table class="hotel-description"><!--тут можно сделать таблицу или это усложнение кода?-->
+                <tr>
+                 <th> мотель</th>
+                 <th> от 2000 р. </th>
+                </tr>
+              </table>
+              <a href="#" type="btn">подробнее</a>
+              <a href="#" type="btn">забронировать</a>
+              <img src="http://placehold.it/150x100" alt="звездочки">
+              <div class="hotel-rating">рейтинг</div>
+          </li>
+          <li class="hotel">
+              <span class="hotel-name">villas at poco diablo</span>
+              <img src="http://placehold.it/150x100" alt="villas">
+              <table class="hotel-description"><!--тут можно сделать таблицу или это усложнение кода?-->
+                <tr>
+                 <th> апартаменты</th>
+                 <th> от 4000 р.</th>
+                </tr>
+              </table>
+              <a href="#" type="btn">подробнее</a>
+              <a href="#" type="btn">забронировать</a>
+              <img src="http://placehold.it/150x100" alt="звездочки">
+              <div class="hotel-rating">рейтинг</div>
+          </li>
+       </ul>
+      
+      
+      </section>
+          
+      <footer class="main-footer">
+        <div class="container">
+        <section class="footer-contacts">
+         #visitsedona
+        </section>
+        <section class="footer-social">
+          
+          <a class="social-btn social-btn-tw" href="#">twitter</a>
+          <a class="social-btn social-btn-fb" href="#">facebook</a>
+          <a class="social-btn social-btn-ytub" href="#">youtube</a>
+        </section>
+        <section class="footer-copyright">
+          <span>website by</span>
+          <a class="btn" href="https://htmlacademy.ru">HTML Academy</a>
+        </section> 
+    </footer>
+      
+ </body>
+</html>
+          
+      
+      
