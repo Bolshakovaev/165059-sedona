@@ -3,8 +3,7 @@
 
   <head>
     <meta charset="utf-8">
-    <title>Седона</title>
-    <!-- Пример подключения стилей из папки css -->
+    <title>Седона главная страница</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
@@ -13,61 +12,56 @@
         <ul>
           <li> <a href="#">Информация</a></li>
           <li> <a href="#">Фото и видео</a></li>
-            <img src="http://placehold.it/150x100" alt="City of Sedona">
+          
           <li><a href="#">Карта штата</a></li>
           <li><a href="#">Гостиницы</a></li>
         </ul>
-       </nav>           
+        <a class="logo" href="http://placehold.it/150x100"></a>             
+      </nav>           
     </header>  
-    <main class="content">
-        <div class="logo">
-            <img src="http://placehold.it/150x100" alt="Логотип Седона">
-        </div>
-        <div class="slogan">
-            <h1>седона-небольшой городок в аризоне, <br>заслуживающий большего!</h1>
-        </div>
-            <h2 class="title"> рассмотрим 5 причин, по которым седона круче, чем гранд каньон </h2>
-        
-        <section class="reasons">
+    <main class="content">        
+        <h1  class="slogan">седона-небольшой городок в аризоне, <br>заслуживающий большего!</h1>        
+        <h2 class="title"> рассмотрим 5 причин, по которым седона круче, чем гранд каньон </h2>
+       <section class="reasons">
          <div class="reason">
-            <h3>настоящий <br>городок </h3>
-            <span>-№1-</span>
+            <h3>настоящий городок </h3>
+            <div>№1</div>
             <p>седона не аттракцион для туристов, там течет настоящая жизнь</p>
             <img src="http://placehold.it/150x100" alt="Вид Седоны">
-           <ul>
+           <ul class="icons">
              <li class="accommodation">
                <h3>жилье</h3>
                <p> рекомендуем пожить в настоящем мотеле, все как в кино</p>
              </li>  
              <li class="food">
                <h3>еда</h3>
-               <p> всегда заказывайте фирменный бургер <br>вы не разочаруетесь!</p>
+               <p> всегда заказывайте фирменный бургер вы не разочаруетесь!</p>
              </li>   
              <li class="souvenirs">
                <h3>сувениры</h3>
-               <p> не только китайского,<br>но и местного производства!</p>
+               <p> не только китайского,но и местного производства!</p>
              </li> 
            </ul>
          </div>
          <div class="reason">
             <h3>там есть<br>мост дьявола</h3>
-            <span>-№2-</span>
-            <p>да, по нему можно пройти!<br> если конечно вы осмелитесь</p>
+            <div>№2</div>
+            <p>да, по нему можно пройти!<br>если конечно вы осмелитесь</p>
           
         </div>
         <div class="reason">
-            <h3>небольшая<br> площадь </h3>
-            <span>-№3-</span>
-            <p>все достопримечательности<br> находятся очень близко</p>
+            <h3>небольшая площадь </h3>
+            <div>№3</div>
+            <p>все достопримечательности находятся очень близко</p>
          </div>
          <div class="reason">
-            <h3>красивая<br>дорога</h3>
-            <span>-№4-</span>
-            <p>ехать в сдону из лас-вегаса совсем <br>не скучно!</p>
+            <h3>красиваядорога</h3>
+            <div>№4</div>
+            <p>ехать в сдону из лас-вегаса совсем не скучно!</p>
          </div>
          <div class="reason">
             <h3>мало<br>туристов</h3>
-            <span>-№5-</span>
+            <div>№5</div>
             <p>седона не аттракцион для туристов, там течет настоящая жизнь</p>           
          </div> 
             
@@ -80,8 +74,8 @@
           <h3>поиск гостиницы в седоне</h3>
           
           <form class="booking-form" action="https://echo.htmlacademy.ru" method="post">
-            <input type="date" name="date" value="" placeholder="Дата заезда">
-            <input type="date" name="time" value="" placeholder="Дата выезда">
+            <input type="date" name="check-in" value="" placeholder="Дата заезда">
+            <input type="date" name="check-out" value="" placeholder="Дата выезда">
             <input type="number" name="adult" value="" placeholder="Взрослые">
             <input type="number" name="child" value="" placeholder="Дети">
             <button class="btn" type="submit">найти</button>
@@ -89,7 +83,7 @@
      </article>
     </main>
     <footer class="main-footer">
-        <div class="container">
+        
         <section class="footer-contacts">
          #visitsedona
         </section>
@@ -103,6 +97,6 @@
           <span>website by</span>
           <a class="btn" href="https://htmlacademy.ru">HTML Academy</a>
         </section> 
-            </footer>
+     </footer>
   </body>
 </html>
