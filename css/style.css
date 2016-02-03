@@ -1,0 +1,35 @@
+body {
+font-size: 21px;
+font-family:"PT Sans", "Arial", serif;
+font-weight: bold;
+color: black;
+line-height: 26px;
+}
+.title {
+    font-size: 14px;
+}
+.illustrated {
+    line-height: 21px;
+    color: white;
+}
+.illustrated p{
+    font-size: 14px;
+}
+.icon h3{
+    line-height: 21px;
+    }
+.icon p {
+   line-height: 21px;
+    font-size: 14px;
+}
+.interest h2{
+    font-size: 30px;
+    line-height: 24px;
+}
+.interest p{
+    font-size: 14px;
+    line-height: 24px;
+}
+.booking h3{
+    color: white;
+}
