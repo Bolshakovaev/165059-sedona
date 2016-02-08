@@ -1,3 +1,11 @@
+html,
+body {
+  min-width: 768px;
+    max-width: 1200px;
+  margin: 0;
+  padding: 0;
+    background-color: red;
+}
 body {
 font-size: 21px;
 font-family:"PT Sans", "Arial", serif;
@@ -5,8 +13,88 @@ font-weight: bold;
 color: black;
 line-height: 26px;
 }
+
+
+
+.clearfix::after {
+  content: "";
+
+  display: table;
+  clear: both;
+}
+.main-header{
+    margin-bottom: 55px;
+    
+    background-image: url(../img/background_main.jpg);/пока вставила, но не понимаю, как регулировать высоту этого блока с учетом картинки- фона*/
+}
+.main-navigation {
+    margin: 0 auto;
+    
+    padding-left: 72 px;
+    padding-top: 22px;
+    padding-right: 72 px;
+    background-color: white; /*тут тоже не поняла, как по размеру отделить этот блок от main-header с учетом картинки фона и того, что тут фон белый*/
+    }
+.content {
+    background-color: fuchsia;
+    margin-bottom: 35px;
+}
+.slogan {
+    margin-right: auto;
+    margin-left: auto;
+    width: 445px;/*правильно задавать тут ширину?*/
+    background-color: aqua;
+    margin-bottom: 35px;
+}
 .title {
+   margin-right: auto;
+    margin-left: auto;
+    width: 495px;/*правильно задавать тут ширину?*/
+    background-color: yellow; 
     font-size: 14px;
+}
+.illustrated-left {
+   
+   max-width:  1200px; /* тут не поняла, как вписать картинку справа*/
+    
+    background-color: coral;
+}
+.icon {
+    float:left;
+    margin-right: 120px;
+    width: 250px;
+    background-color: orange;
+}
+.icon:last-child{
+    margin-right: 0;
+}
+.illustrated-right {
+    
+    max-width:  1200px; /* тут не поняла, как вписать картинку справа*/
+    
+    background-color: maroon;
+}
+.reason {
+    float:left;
+    margin-right: 120px;
+    width: 250px;
+    background-color: orange;
+}
+.reason:last-child{
+    margin-right: 0;
+}
+.interest {
+        margin-right: auto;
+    margin-left: auto;
+    width: 440px;/*правильно задавать тут ширину?*/
+    background-color: olivedrab;
+    margin-bottom: 35px;
+    }
+.booking {
+    width: 570px;
+    padding-bottom: 56px;
+    background-color: lawngreen;
+    
 }
 .illustrated {
     line-height: 21px;
