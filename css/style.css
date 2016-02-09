@@ -28,7 +28,7 @@ line-height: 26px;
     background-image: url(../img/background_main.jpg);/пока вставила, но не понимаю, как регулировать высоту этого блока с учетом картинки- фона*/
 }
 .main-navigation {
-    margin: 0 auto;
+   
     
     padding-left: 72 px;
     padding-top: 22px;
@@ -120,4 +120,38 @@ line-height: 26px;
 }
 .booking h3{
     color: white;
+}
+.hotel-description {  /*этот класс еще при перечислении самих отелей есть, может, заменить, чтоб сетке не мешало?*/
+    float: left;
+    padding-left: 70px;
+    padding-top: 30px;
+   
+    background-color: dodgerblue; /*почему текст сверху вылезает за пределы сетки?*/
+}
+.triangle, .sorting {
+    width: 1055px;
+    background-color: green;
+}
+.hotel {
+    width: 1055px;
+    background-color: mistyrose;
+}
+.main-footer {
+   margin-top: 50px;
+    background-color: chartreuse;
+}
+.footer-contacts {
+    float: left;
+    width: 400px;
+}
+.footer-social {
+    float: left;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.footer-copyright {
+    float: left;
+    width: 400px;
+   
 }
