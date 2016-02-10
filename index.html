@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <header class="main-header clearfix">
+    <header class="main-header">
       <nav class="main-navigation">
-        <ul>
+        <ul class="clearfix">
           <li> <a href="#">Информация</a></li>
           <li> <a href="#">Фото и видео</a></li>
           
@@ -22,11 +22,12 @@
     <main class="content">        
         <h1  class="slogan">седона-небольшой городок в аризоне, <br>заслуживающий большего!</h1>        
         <h2 class="title"> рассмотрим 5 причин, по которым седона круче, чем гранд каньон </h2>
-       <ol class="reasons clearfix">
-           <li class="illustrated illustrated-left clearfix">настоящий городок 
-              <p>седона не аттракцион для туристов, там течет настоящая жизнь</p>
-              <img src="img/flowers.jpg" width="800" height="256" alt="Вид Седоны">
-                <ul class="">
+       <ol class="reasons">
+           <li class="illustrated illustrated-left">настоящий городок 
+                <img src="img/flowers.jpg"  alt="Вид Седоны">
+               <p>седона не аттракцион для туристов, там течет настоящая жизнь</p>
+            <div class="clearfix"></div>
+                <ul class="clearfix">
                     <li class="icon accommodation">
                         <h3>жилье</h3>
                         <p> рекомендуем пожить в настоящем мотеле, все как в кино</p>
@@ -42,10 +43,12 @@
                 </ul>
            </li>   
         
-         <li class="illustrated illustrated-right">
-            <h3>там есть<br>мост дьявола</h3>
+         <li class="illustrated illustrated-right clearfix">
+            <img src="img/mountain.jpg"  alt="Горы Седоны">
+             <h3>там есть<br>мост дьявола</h3>
             <p>да, по нему можно пройти!<br>если конечно вы осмелитесь</p>          
          </li>
+           
          <li class="reason">
             <h3>небольшая площадь </h3>
             <p>все достопримечательности находятся очень близко</p>
@@ -59,6 +62,7 @@
             <p>седона не аттракцион для туристов, там течет настоящая жизнь</p>           
          </li>             
         </ol>
+        <div class="clearfix"></div>
     <div class="interest"> 
         <h2>заинтересовались?</h2>
         <p>укажите предполагаемые даты поездки, <br> и мы покажем вам лучшие предложения гостиниц в седоне</p>

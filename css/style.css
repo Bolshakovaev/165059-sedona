@@ -1,14 +1,13 @@
 html,
 body {
-  min-width: 768px;
-    max-width: 1200px;
+  
   margin: 0;
   padding: 0;
     background-color: red;
 }
 body {
 font-size: 21px;
-font-family:"PT Sans", "Arial", serif;
+font-family:"PT Sans", Arial, serif;
 font-weight: bold;
 color: black;
 line-height: 26px;
@@ -23,16 +22,17 @@ line-height: 26px;
   clear: both;
 }
 .main-header{
-    margin-bottom: 55px;
-    
+    padding-top: 55px;
+    min-width: 768px;
+    max-width: 1200px;
     background-image: url(../img/background_main.jpg);/пока вставила, но не понимаю, как регулировать высоту этого блока с учетом картинки- фона*/
 }
 .main-navigation {
    
     
-    padding-left: 72 px;
+    padding-left: 72px;
     padding-top: 22px;
-    padding-right: 72 px;
+    padding-right: 72px;
     background-color: white; /*тут тоже не поняла, как по размеру отделить этот блок от main-header с учетом картинки фона и того, что тут фон белый*/
     }
 .content {
@@ -42,23 +42,25 @@ line-height: 26px;
 .slogan {
     margin-right: auto;
     margin-left: auto;
-    width: 445px;/*правильно задавать тут ширину?*/
+    text-align: center; /*он уехал куда-то влево теперь*/
     background-color: aqua;
     margin-bottom: 35px;
 }
 .title {
    margin-right: auto;
     margin-left: auto;
-    width: 495px;/*правильно задавать тут ширину?*/
+    text-align: center;
     background-color: yellow; 
     font-size: 14px;
 }
 .illustrated-left {
-   
-   max-width:  1200px; /* тут не поняла, как вписать картинку справа*/
-    
-    background-color: coral;
+     background-color: coral;
 }
+.illustrated-left img{
+    float: right;
+    width: 66%;
+}
+
 .icon {
     float:left;
     margin-right: 120px;
@@ -68,16 +70,17 @@ line-height: 26px;
 .icon:last-child{
     margin-right: 0;
 }
-.illustrated-right {
+.illustrated-right img{
+    float: left;
+    width: 66%;
     
-    max-width:  1200px; /* тут не поняла, как вписать картинку справа*/
     
     background-color: maroon;
 }
 .reason {
     float:left;
-    margin-right: 120px;
-    width: 250px;
+    
+    width: 33%;
     background-color: orange;
 }
 .reason:last-child{
@@ -86,7 +89,7 @@ line-height: 26px;
 .interest {
         margin-right: auto;
     margin-left: auto;
-    width: 440px;/*правильно задавать тут ширину?*/
+    text-align: center;
     background-color: olivedrab;
     margin-bottom: 35px;
     }
@@ -121,19 +124,25 @@ line-height: 26px;
 .booking h3{
     color: white;
 }
-.hotel-description {  /*этот класс еще при перечислении самих отелей есть, может, заменить, чтоб сетке не мешало?*/
+.hotel-description {  
     float: left;
+   
     padding-left: 70px;
     padding-top: 30px;
    
-    background-color: dodgerblue; /*почему текст сверху вылезает за пределы сетки?*/
+    background-color: dodgerblue; 
+}
+.hotel-description legend{  
+    float: left;
+   width: 100%;
+    
 }
 .triangle, .sorting {
-    width: 1055px;
+    width: 100%; /*1055px-эта вся длина, после распределения по горизонтали. Задать в процентах?*/
     background-color: green;
 }
 .hotel {
-    width: 1055px;
+    width: 100%; /*тут тоже вместо 1055px задать в процентах?*/
     background-color: mistyrose;
 }
 .main-footer {
@@ -142,16 +151,15 @@ line-height: 26px;
 }
 .footer-contacts {
     float: left;
-    width: 400px;
+    width: 33%;
 }
 .footer-social {
     float: left;
-    width: 400px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 33%;
+    
 }
 .footer-copyright {
     float: left;
-    width: 400px;
+    width: 33%;
    
 }

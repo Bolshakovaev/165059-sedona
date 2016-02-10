@@ -12,16 +12,16 @@
         <ul>
           <li> <a href="#">Информация</a></li>
           <li> <a href="#">Фото и видео</a></li>
-           <a href="#"><img class="logo" src="img/logo.png"></a>
+            <li> <a href="#"><img class="logo" src="img/logo.png"></a></li>
           <li><a href="#">Карта штата</a></li>
           <li><a href="#">Гостиницы</a></li>
         </ul>
        </nav>           
     </header>  
-      <form action="#" class="clearfix">
+      <form action="#" class="hotel-choice clearfix">
       <fieldset class="hotel-description">
          <legend>инфраструктура:</legend>
-           <input type="checkbox" id="pool" name="infrastructure"><label for="pool">бассейн</label><br>
+           <input type="checkbox" id="pool" name="infrastructure"><label for="pool">бассейн</label><!-- 		  лучше все-таки заменить br на div'ы или li для каждой пары input/label Что это значит: после каждой пары ставить <div></div> или каждую пару облечь в div?-->
            <input type="checkbox" id="parking" name="infrastructure"><label for="parking">парковка</label><br>
            <input type="checkbox" id="wifi" name="infrastructure"><label for="wifi">wi-fi</label>  
       </fieldset> 
@@ -42,7 +42,7 @@
       </form> 
           
       <div class="sorting">
-        <h2 class="sorting-results">найдено:3</h2>
+        <h3 class="sorting-results">найдено:3</h2>
         <h2 class="sorting-type">сортировка:</h2>
         <ul class="sorting-items">
           <li class="current"><a href="#">по цене</a></li>
@@ -60,8 +60,8 @@
           <li class="hotel">
               <span class="hotel-name">amara resort &amp; spa</span>
               <img src="img/amara.jpg" alt="amara">
-              <div class="hotel-description">гостиница</div>
-              <div class="hotel-description">  от 3500 р.</div>
+              <div class="hotel-price">гостиница</div>
+              <div class="hotel-price">  от 3500 р.</div>
                <a href="#" type="btn">подробнее</a>
               <a href="#" type="btn">забронировать</a>
               <img src="http://placehold.it/150x100" alt="звездочки">
@@ -71,8 +71,8 @@
           <li class="hotel">
               <span class="hotel-name">desert quail inn</span>
               <img src="img/desert.jpg" alt="desert">
-             <div class="hotel-description">мотель</div>
-              <div class="hotel-description">  от 2000 р.</div>                      
+             <div class="hotel-price">мотель</div>
+              <div class="hotel-price">  от 2000 р.</div>                      
               <a href="#" type="btn">подробнее</a>
               <a href="#" type="btn">забронировать</a>
               <img src="http://placehold.it/150x100" alt="звездочки">
@@ -82,8 +82,8 @@
           <li class="hotel">
               <span class="hotel-name">villas at poco diablo</span>
               <img src="img/villas.jpg" alt="villas">
-             <div class="hotel-description">апартаменты</div>
-              <div class="hotel-description">  от 4000 р.</div>            
+             <div class="hotel-price">апартаменты</div>
+              <div class="hotel-price">  от 4000 р.</div>            
               <a href="#" type="btn">подробнее</a>
               <a href="#" type="btn">забронировать</a>
               <img src="http://placehold.it/150x100" alt="звездочки"><!--звездочки надо тоже вырезать как картинку?-->
