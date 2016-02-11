@@ -3,7 +3,7 @@ body {
   
   margin: 0;
   padding: 0;
-    background-color: red;
+    background-color: white;
 }
 body {
 font-size: 21px;
@@ -11,80 +11,117 @@ font-family:"PT Sans", Arial, serif;
 font-weight: bold;
 color: black;
 line-height: 26px;
+    text-transform: uppercase;
 }
-
-
-
+.container {
+    min-width: 768px;
+    max-width: 1200px;
+    margin:0;
+}
 .clearfix::after {
   content: "";
-
   display: table;
   clear: both;
 }
-.main-header{
-    padding-top: 55px;
-    min-width: 768px;
-    max-width: 1200px;
-    background-image: url(../img/background_main.jpg);/пока вставила, но не понимаю, как регулировать высоту этого блока с учетом картинки- фона*/
+
+.main-navigation {   
+   background: url(../img/background_main.jpg) no-repeat center top;
+   min-height: 512px; /*задала min-height вместо padding-top, чтоб поднять меню вверх и сохранить в полном объеме картинку, иначе меню не поднималось. Так нормально?*/
 }
-.main-navigation {
+.main-navigation ul{
    
+  margin: 0;
+  padding: 0;
+}
+.main-navigation li{
+    float: left;
+    width: 20%; 
+    background-color: white;
+    list-style: none;
+   }
+.main-navigation a {
+  display: block;
+ padding: 22px 0px;
     
-    padding-left: 72px;
-    padding-top: 22px;
-    padding-right: 72px;
-    background-color: white; /*тут тоже не поняла, как по размеру отделить этот блок от main-header с учетом картинки фона и того, что тут фон белый*/
-    }
+  text-decoration: none;
+    text-align: center;
+}
+a.logo {
+    padding: 0;
+    line-height: 0; /*логотип получилось только так вставить, но получается, что макету не соответствует, так как часть его должна выезжать за белый фон. Что делать?*/
+}
+
+
 .content {
-    background-color: fuchsia;
+    margin-top: 60px;
     margin-bottom: 35px;
 }
 .slogan {
     margin-right: auto;
     margin-left: auto;
-    text-align: center; /*он уехал куда-то влево теперь*/
-    background-color: aqua;
+    text-align: center; 
+    
     margin-bottom: 35px;
+    font-size: 21px;
 }
 .title {
    margin-right: auto;
     margin-left: auto;
     text-align: center;
-    background-color: yellow; 
     font-size: 14px;
 }
 .illustrated-left {
-     background-color: coral;
-}
+     background-color: #81b3d2;
+    text-align: center; /*не понимаю, как мне теперь сдвинуть вниз - "настоящий городок", padding-top двигает и картинку вниз*/
+    }
+
 .illustrated-left img{
     float: right;
     width: 66%;
 }
-
+/*Где и как вставлять картинки еды, сувениров и жилья? После того, как вставлю картинки, отрегулирую текст по строчкам*/
+.icon-description{
+    background-color: white;
+    list-style: none;
+}
 .icon {
     float:left;
     margin-right: 120px;
     width: 250px;
-    background-color: orange;
+    color: black;
 }
 .icon:last-child{
     margin-right: 0;
+    
 }
+.illustrated-right {
+    background-color: #81b3d2;
+    text-align: center; 
+    list-style: none;
+    
+}
+
 .illustrated-right img{
     float: left;
     width: 66%;
     
     
-    background-color: maroon;
+    background-color: #81b3d2;
 }
 .reason {
     float:left;
     
     width: 33%;
-    background-color: orange;
-}
+    background-color: "#eeeeee";
+    list-style: none;
+    text-align: center;
+   }
+
 .reason:last-child{
     margin-right: 0;
+}
+.reason p {
+    font-size: 14px;
 }
 .interest {
         margin-right: auto;
@@ -138,11 +175,11 @@ line-height: 26px;
     
 }
 .triangle, .sorting {
-    width: 100%; /*1055px-эта вся длина, после распределения по горизонтали. Задать в процентах?*/
+    width: 85px; 
     background-color: green;
 }
 .hotel {
-    width: 100%; /*тут тоже вместо 1055px задать в процентах?*/
+    width: 85px; 
     background-color: mistyrose;
 }
 .main-footer {
