@@ -9,12 +9,12 @@
   </head>
   <body>
     <div class="container">
-      <header class="main-header">
+     <header class="main-header">
       <nav class="main-navigation">
-        <ul>
+        <ul class="clearfix">
           <li> <a href="#">Информация</a></li>
           <li> <a href="#">Фото и видео</a></li>
-            <li> <a href="#"><img class="logo" src="img/logo.png"></a></li>
+            <li> <a href="#" class="logo"><img  src="img/logo.png"></a></li>
           <li><a href="#">Карта штата</a></li>
           <li><a href="#">Гостиницы</a></li>
         </ul>
@@ -23,9 +23,9 @@
       <form action="#" class="hotel-choice clearfix">
       <fieldset class="hotel-description">
          <legend>инфраструктура:</legend>
-           <input type="checkbox" id="pool" name="infrastructure"><label for="pool">бассейн</label><!-- 		  лучше все-таки заменить br на div'ы или li для каждой пары input/label Что это значит: после каждой пары ставить <div></div> или каждую пару облечь в div?-->
-           <input type="checkbox" id="parking" name="infrastructure"><label for="parking">парковка</label><br>
-           <input type="checkbox" id="wifi" name="infrastructure"><label for="wifi">wi-fi</label>  
+          <div> <input type="checkbox" id="pool" name="infrastructure"><label for="pool">бассейн</label></div>
+          <div> <input type="checkbox" id="parking" name="infrastructure"><label for="parking">парковка</label></div>
+          <div><input type="checkbox" id="wifi" name="infrastructure"><label for="wifi">wi-fi</label> </div> 
       </fieldset> 
       <fieldset class="hotel-description">
          <legend>тип жилья:</legend>

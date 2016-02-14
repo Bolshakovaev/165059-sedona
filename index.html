@@ -12,39 +12,41 @@
     <div class="container">
       <header class="main-header">
       <nav class="main-navigation">
-        <ul class="clearfix">
-          <li> <a href="#">Информация</a></li>
-          <li> <a href="#">Фото и видео</a></li>
-            <li><a href="#" class="logo"><img  src="img/logo.png"></a> </li>
-          <li><a href="#">Карта штата</a></li>
-          <li><a href="#">Гостиницы</a></li>
+        
+          <ul class="clearfix">
+            <li><a href="#">Информация</a></li>
+            <li><a href="#">Фото и видео</a></li>
+              <li><a href="#" class="logo"><img  src="img/logo2.png" alt="логотип" width="138" height="70"></a> </li>
+            <li><a href="#">Карта штата</a></li>
+            <li><a href="#">Гостиницы</a></li>
         </ul>
              
       </nav>           
     </header>  
     <main class="content">        
-        <h1  class="slogan">седона-небольшой городок в аризоне, <br>заслуживающий большего!</h1>        
+        <h1  class="slogan">седона &mdash; небольшой городок в аризоне, <br>заслуживающий большего!</h1>        
         <h2 class="title"> рассмотрим 5 причин, по которым седона круче, чем гранд каньон </h2>
        <ol class="reasons">
-           <li class="illustrated illustrated-left">настоящий городок 
-                <img src="img/flowers.jpg"  alt="Вид Седоны">
+           <li class="illustrated illustrated-left clearfix">
+             <div class="sedona-view">
+               <img src="img/flowers.jpg"  alt="Вид Седоны" width="800" height="258">
+               <h3>настоящий городок </h3>              
                <p>седона не аттракцион для туристов, там течет настоящая жизнь</p>
-            <div class="clearfix"></div>
-                <ul class="clearfix icon-description">
-                    <li class="icon accommodation">
-                        
-                        <h3>жилье</h3>
-                        <p> рекомендуем пожить в настоящем мотеле, все как в кино</p>
-                    </li>  
-                    <li class="icon food">
-                        <h3>еда</h3>
-                        <p> всегда заказывайте фирменный бургер вы не разочаруетесь!</p>
-                    </li>   
-                    <li class="icon souvenirs">
-                        <h3>сувениры</h3>
-                        <p> не только китайского,но и местного производства!</p>
-                    </li> 
-                </ul>
+             </div>
+             <ul class="clearfix icon-description">                    
+                <li class="icon accommodation">
+                   <h3>жилье</h3>
+                   <p> рекомендуем пожить в настоящем мотеле, все как в кино</p>
+                 </li>  
+                 <li class="icon food">
+                    <h3>еда</h3>
+                    <p> всегда заказывайте фирменный бургер вы не разочаруетесь!</p>
+                  </li>   
+                  <li class="icon souvenirs">
+                    <h3>сувениры</h3>
+                    <p> не только китайского,но и местного производства!</p>
+                  </li> 
+             </ul>
            </li>   
         
          <li class="illustrated illustrated-right clearfix">
@@ -68,35 +70,40 @@
         </ol>
         <div class="clearfix"></div>
     <div class="interest"> 
+        
         <h2>заинтересовались?</h2>
         <p>укажите предполагаемые даты поездки, <br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
-    </div>
+        <img src="img/map.png" alt="карта седоны">
+        
+    
     <article class="booking">
           <h3>поиск гостиницы в седоне</h3>
           
           <form class="booking-form" action="https://echo.htmlacademy.ru" method="post">
-            <input type="date" name="check-in" value="" placeholder="Дата заезда">
-            <input type="date" name="check-out" value="" placeholder="Дата выезда">
-            <input type="number" name="adult" value="" placeholder="Взрослые">
-            <input type="number" name="child" value="" placeholder="Дети">
+          Дата заезда:<input type="date" name="check-in" value="" placeholder="Дата заезда">
+          Дата выезда: <input type="date" name="check-out" value="" placeholder="Дата выезда">
+          Взрослые: <input type="number" name="adult" value="" placeholder="Взрослые">
+          Дети: <input type="number" name="child" value="" placeholder="Дети">
             <button class="btn" type="submit">найти</button>
           </form>
      </article>
+    </div>
     </main>
     <footer class="main-footer">
         
-        <section class="footer-contacts">
+        <section class="footer-contacts footer-section">
          #visitsedona
         </section>
-        <section class="footer-social">
+        <section class="footer-social footer-section">
           
           <a class="social-btn social-btn-tw" href="#">twitter</a>
           <a class="social-btn social-btn-fb" href="#">facebook</a>
           <a class="social-btn social-btn-ytub" href="#">youtube</a>
         </section>
-        <section class="footer-copyright">
+        <section class="footer-copyright footer-section">
           <span>website by</span>
-          <a class="btn" href="#"><img src="img/logohtml.png"></a>
+          <!-- alt -->
+          <a class="btn" href="#"><img src="img/logohtml.png" alt="логотип"></a>
         </section> 
      </footer>
    </div>
