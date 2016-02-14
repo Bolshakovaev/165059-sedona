@@ -25,8 +25,9 @@ line-height: 26px;
 }
 .main-navigation {   
     background: url(../img/background_main.jpg) no-repeat;
-    min-height: 512px; 
-    width: 100%
+    background-size: 100%;
+   height: 512px; 
+    
 }
 /*у меня основная картинка фона оказывается шире, чем те, котрые лежат ниже. Почему?*/
 .main-navigation ul{
@@ -37,10 +38,13 @@ line-height: 26px;
     text-align: center;
     line-height: 12px;
 }
-.main-navigation li:nth-child(1), .main-navigation li:nth-child(2), .main-navigation li:nth-child(3){
+.main-navigation li:nth-child(1), .main-navigation li:nth-child(2){
     float: left;
     width: 20%;    
    }
+.main-navigation li:nth-child(3){
+    float: left;
+}
 .main-navigation li:nth-child(4), .main-navigation li:nth-child(5) {
     float: right;
     width: 20%;    
@@ -50,7 +54,9 @@ line-height: 26px;
     position: absolute;    
     top: -21px;
     left: 50%; 
-     margin-left: -70px;
+    margin-left: -70px;
+    width: 140px;
+    height: 70px;
 }
 
 
@@ -58,7 +64,7 @@ line-height: 26px;
    display: block;
    padding: 21px 0px;
    font-size: 14px;
-   color="#000000"; 
+   color:#000000; 
    text-decoration: none;
   }
 
@@ -86,25 +92,32 @@ line-height: 26px;
    padding-top: 56px;
     
 }
-.illustrated-left img{
-   float: right;
-   width: 67%;  /*Вот комментарий из ТЗ: - Фотографии, занимающие по две трети ширины вставляются так, чтобы обрезаться сверху и снизу при увеличении размера (ширина 66%, высота подстраивается под ширину, чтобы не нарушать пропорций, но фото не выходит за отведённую для него зону). Тут надо задать minheight? или что это значит?*/
+.illustrated-left{
+    
+    box-sizing:border-box;
+    max-width:800px;
+    min-width:600px;
+    background-color: #81b3d2; 
+    padding-top: 20px; 
+    padding-bottom: 20px; 
+    padding-right: 66%; 
+    background-image: url(../img/flowers.jpg); 
+    background-position: right center; 
+    background-repeat: no-repeat; 
+    background-size:66% auto;}
 }
-.sedona-view {
-   min-height: 244px; /*сделала отдельный блок для картинки, p и h3, чтобы задать синий цвет до конца картинки. Только теперь не понимаю, как рассчитать minheight для этого блока, по идее он должен соответствовать высоте картинки?? Тогда почему, если я ставлю по высоте картинки -258 px, блок оказывается больше?*/
-   
-}
+
 
 .icon-description{
     background-color: white;
     list-style: none;
-   
+   clear:both;
 }
 .icon {
    float:left;
-   margin-right: 120px;
+  text-align:center
    padding-top: 163px;
-   width: 250px;
+   width: 33,3333%;
    color: black;
  
 }
@@ -112,14 +125,64 @@ line-height: 26px;
     margin-right: 0;    
 }
 .accommodation {
-    background:#ffffff url(../img/accomodation.png) no-repeat center 62px;
-}
+    background-color :#ffffff;
+    background-image: url(../img/accomodation.png);
+    background-repeat: no-repeat;
+    background-position: center 62px;
+    background-size: 72px 75px;
+   }
 .food {
-    background:#ffffff url(../img/food.png) no-repeat center 62px;
+    background-color: #ffffff;
+    background-image: url(../img/food.png);
+    background-repeat: no-repeat;
+    background-position: center 62px;
+    background-size: 75px 74px;    
 }
 .souvenirs {
-    background:#ffffff url(../img/souvenirs.png) no-repeat center 62px; /* у меня почему-то картинка вставляется как будто меньшим размером и из-за этого соотношение всех отступов другое*/
+    background-color: #ffffff;
+    background-image: url(../img/souvenirs.png);
+    background-repeat: no-repeat;
+    background-position: center 62px; /* у меня почему-то картинка вставляется как будто меньшим размером и из-за этого соотношение всех отступов другое*/
+    background-size: 64px 76px;    
 }
+.reason {
+    float:left;
+    min-height: 255px;
+    width: 33.33333%;
+    background-color:#eeeeee;
+    list-style: none;
+    text-align: center;
+}
+
+.reason:last-child{
+    margin-right: 0;
+}
+.reason p {
+    font-size: 14px;
+}
+.reasons {
+    counter-reset:reason-number;
+}
+.reasons>li {
+    counter-increment: reason-number; 
+}
+
+.reasons>li p::before {
+	content: counter(reason-number); 
+
+	font-style:italic;
+	color:red
+} /*как убрать отображение номеров у жилья еды и сувениров?*/
+.reasons .icon::before {
+	content: ""; 
+
+} /*не получается убрать отображение номеров у жилья еды и сувениров?*/
+
+
+.reasons{
+    padding: 0;
+}
+
 .illustrated-right {
     background-color: #81b3d2;
     text-align: center; 
@@ -135,34 +198,6 @@ line-height: 26px;
     background-color: #81b3d2;
 }
 
-.reason {
-    float:left;
-    min-height: 255px;
-    width: 33.33333%;
-    background-color:#eeeeee;
-    list-style: none;
-    text-align: center;
-   }
-
-.reason:last-child{
-    margin-right: 0;
-}
-.reason p {
-    font-size: 14px;
-}
-reasons {
-    counter-reset:reason-number;
-}
-.reasons>li {
-    counter-increment: reason-number; 
-}
-
-.reasons>li p::before {
-	content: counter(reason-number); 
-
-	font-style:italic;
-	color:red
-} /*как убрать отображение номеров у жилья еды и сувениров?*/
 
 .interest {
     margin-right: auto;
@@ -210,7 +245,7 @@ reasons {
     padding: 35px 135px;
     font-size: 21px;
 }
-.booking-form input{ /*Тут не разобралась, как правильно расставить все формы*/
+.booking-form input{ /*все куда-то поехало всё равно*/
    width: 345px;
     margin-bottom: 32px;
     margin-left: 56px;
@@ -218,6 +253,8 @@ reasons {
     padding: 16px;
     background-color: #f2f2f2;
     font-size: 14px;
+    border: none;
+    box-sizing: border-box;
 }
 .booking-form input:nth-child(3), .booking-form input:nth-child(4){
 width: 115px;

@@ -16,7 +16,7 @@
           <ul class="clearfix">
             <li><a href="#">Информация</a></li>
             <li><a href="#">Фото и видео</a></li>
-              <li><a href="#" class="logo"><img  src="img/logo2.png" alt="логотип" width="138" height="70"></a> </li>
+              <li class="logo"><a href="#"><img  src="img/logo2.png" alt="логотип" width="138" height="70"></a> </li>
             <li><a href="#">Карта штата</a></li>
             <li><a href="#">Гостиницы</a></li>
         </ul>
@@ -28,11 +28,8 @@
         <h2 class="title"> рассмотрим 5 причин, по которым седона круче, чем гранд каньон </h2>
        <ol class="reasons">
            <li class="illustrated illustrated-left clearfix">
-             <div class="sedona-view">
-               <img src="img/flowers.jpg"  alt="Вид Седоны" width="800" height="258">
-               <h3>настоящий городок </h3>              
-               <p>седона не аттракцион для туристов, там течет настоящая жизнь</p>
-             </div>
+              <h3>настоящий городок </h3>              
+               <p>седона не аттракцион для туристов, там течет настоящая жизнь</p>            
              <ul class="clearfix icon-description">                    
                 <li class="icon accommodation">
                    <h3>жилье</h3>
@@ -80,10 +77,10 @@
           <h3>поиск гостиницы в седоне</h3>
           
           <form class="booking-form" action="https://echo.htmlacademy.ru" method="post">
-          Дата заезда:<input type="date" name="check-in" value="" placeholder="Дата заезда">
-          Дата выезда: <input type="date" name="check-out" value="" placeholder="Дата выезда">
-          Взрослые: <input type="number" name="adult" value="" placeholder="Взрослые">
-          Дети: <input type="number" name="child" value="" placeholder="Дети">
+         <label for="checkin">Дата заезда:</label> <input type="date" id="checkin" name="check-in" value="" placeholder="Дата заезда">
+         <label for="checkout">Дата выезда: </label> <input type="date" id="checkout" name="check-out" value="" placeholder="Дата выезда">
+         <label for="adult">Взрослые: </label> <input type="number" id="adult" name="adult" value="" placeholder="Взрослые">
+         <label for="child"> Дети: </label><input type="number" name="child" value="" placeholder="Дети">
             <button class="btn" type="submit">найти</button>
           </form>
      </article>
