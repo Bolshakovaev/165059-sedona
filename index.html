@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <title>Седона главная страница</title>
     <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/normalize.css">
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:700,400&subset=latin,cyrillic">
      
   </head>
@@ -60,7 +61,7 @@
             <h3>красивая дорога</h3>
             <p>ехать в седону из лас-вегаса совсем не скучно!</p>
          </li>
-        <li class="reason">
+         <li class="reason">
             <h3>мало<br>туристов</h3>
             <p>седона не аттракцион для туристов, там течет настоящая жизнь</p>           
          </li>             
@@ -76,13 +77,13 @@
     <article class="booking">
           <h3>поиск гостиницы в седоне</h3>
           
-          <form class="booking-form" action="https://echo.htmlacademy.ru" method="post">
-         <label for="checkin">Дата заезда:</label> <input type="date" id="checkin" name="check-in" value="" placeholder="Дата заезда">
-         <label for="checkout">Дата выезда: </label> <input type="date" id="checkout" name="check-out" value="" placeholder="Дата выезда">
-         <label for="adult">Взрослые: </label> <input type="number" id="adult" name="adult" value="" placeholder="Взрослые">
-         <label for="child"> Дети: </label><input type="number" name="child" value="" placeholder="Дети">
-            <button class="btn" type="submit">найти</button>
-          </form>
+        <form class="booking-form clearfix" action="https://echo.htmlacademy.ru" method="post">
+          <input type="date" id="checkin" name="check-in" value="" placeholder="Дата заезда"> <label for="checkin">Дата заезда:</label> 
+          <input type="date" id="checkout" name="check-out" value="" placeholder="Дата выезда"> <label for="checkout">Дата выезда: </label> 
+          <input type="number" id="adult" name="adult" value="" placeholder="Взрослые">  <label for="adult">Взрослые: </label> 
+          <input type="number" id="child" value="" placeholder="Дети"><label for="child"> Дети: </label>
+          <button class="btn" type="submit">найти</button>
+        </form>
      </article>
     </div>
     </main>

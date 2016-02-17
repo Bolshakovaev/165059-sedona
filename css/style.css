@@ -13,6 +13,11 @@ color: black;
 line-height: 26px;
     text-transform: uppercase;
 }
+ul, ol, li {
+    margin:0; 
+    padding:0;
+    list-style-type: none;
+}
 .container {
     min-width: 768px;
     max-width: 1200px;
@@ -29,7 +34,6 @@ line-height: 26px;
    height: 512px; 
     
 }
-/*у меня основная картинка фона оказывается шире, чем те, котрые лежат ниже. Почему?*/
 .main-navigation ul{
     margin: 0;
     padding: 0;
@@ -95,18 +99,17 @@ line-height: 26px;
 .illustrated-left{
     
     box-sizing:border-box;
-    max-width:800px;
-    min-width:600px;
+    
     background-color: #81b3d2; 
     padding-top: 20px; 
     padding-bottom: 20px; 
-    padding-right: 66%; 
+   
     background-image: url(../img/flowers.jpg); 
     background-position: right center; 
     background-repeat: no-repeat; 
-    background-size:66% auto;}
+    background-size:66% auto;
 }
-
+/*картинка опять вставилась неправильно*/
 
 .icon-description{
     background-color: white;
@@ -115,9 +118,9 @@ line-height: 26px;
 }
 .icon {
    float:left;
-  text-align:center
+  text-align:center;
    padding-top: 163px;
-   width: 33,3333%;
+   width: 33.3333%;
    color: black;
  
 }
@@ -129,21 +132,21 @@ line-height: 26px;
     background-image: url(../img/accomodation.png);
     background-repeat: no-repeat;
     background-position: center 62px;
-    background-size: 72px 75px;
+   
    }
 .food {
     background-color: #ffffff;
     background-image: url(../img/food.png);
     background-repeat: no-repeat;
     background-position: center 62px;
-    background-size: 75px 74px;    
+      
 }
 .souvenirs {
     background-color: #ffffff;
     background-image: url(../img/souvenirs.png);
     background-repeat: no-repeat;
-    background-position: center 62px; /* у меня почему-то картинка вставляется как будто меньшим размером и из-за этого соотношение всех отступов другое*/
-    background-size: 64px 76px;    
+    background-position: center 62px; 
+     
 }
 .reason {
     float:left;
@@ -172,11 +175,11 @@ line-height: 26px;
 
 	font-style:italic;
 	color:red
-} /*как убрать отображение номеров у жилья еды и сувениров?*/
-.reasons .icon::before {
+} 
+.reasons .icon p::before {
 	content: ""; 
 
-} /*не получается убрать отображение номеров у жилья еды и сувениров?*/
+} 
 
 
 .reasons{
@@ -218,7 +221,7 @@ line-height: 26px;
     line-height: 21px;
     }
 .icon p {
-   line-height: 21px;
+    line-height: 21px;
     font-size: 14px;
 }
 .interest h2{
@@ -232,32 +235,45 @@ line-height: 26px;
 .booking {
     position: absolute;
     left: 50%;
-   top: 2084px;
+    top: 2084px;
+   margin: 0;
     margin-left: -284px;
     width: 568px;
     background-color: white;
     font-size: 14px;
+    padding: 0;
 }
 
 .booking h3{
     color: white;
     background-color: #766357;
-    padding: 35px 135px;
+   padding: 35px 140px;
     font-size: 21px;
 }
-.booking-form input{ /*все куда-то поехало всё равно*/
-   width: 345px;
+
+.booking-form input{ 
+    width: 345px;
     margin-bottom: 32px;
-    margin-left: 56px;
-    margin-right: 56px;
-    padding: 16px;
+    margin-left: 16px;
+    margin-right: 55px;
+    padding: 14px 16px;
     background-color: #f2f2f2;
     font-size: 14px;
+    font-family:"PT Sans", Arial, serif;
     border: none;
     box-sizing: border-box;
+    text-transform: uppercase;
+    float: right; 
+   clear: right;
+   /*Саша, вопросы по форме: как поднять последний блок? и блок сам стал уже почему? и не могу никак убрать отступ сверху над коричневым блоком*/
 }
-.booking-form input:nth-child(3), .booking-form input:nth-child(4){
-width: 115px;
+ #adult, #child {
+    
+     width: 115px;
+     
+}
+#child {
+    margin-left: 0;
 }
 .booking-form .btn{
     clear:both;
@@ -267,6 +283,13 @@ width: 115px;
     font-size: 21px;
     background-color: #81b3d2;
 }
+.booking-form label{
+    display: block;
+    line-height: 75px;
+    margin-left: 55px;
+    
+}
+
 /*.hotel-description {  
     float: left;
    
