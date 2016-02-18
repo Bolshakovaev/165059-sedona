@@ -3,23 +3,27 @@
 
   <head>
     <meta charset="utf-8">
-    <title>Седона внутренняя страница</title>
+    <title>Седона главная страница</title>
     <link rel="stylesheet" href="css/style.css">
-       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:700,400&subset=latin,cyrillic">
+      <link rel="stylesheet" href="css/normalize.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:700,400&subset=latin,cyrillic">
+     
   </head>
   <body>
     <div class="container">
-     <header class="main-header">
+      <header class="main-header">
       <nav class="main-navigation">
-        <ul class="clearfix">
-          <li> <a href="#">Информация</a></li>
-          <li> <a href="#">Фото и видео</a></li>
-            <li> <a href="#" class="logo"><img  src="img/logo.png"></a></li>
-          <li><a href="#">Карта штата</a></li>
-          <li><a href="#">Гостиницы</a></li>
+        
+          <ul class="clearfix">
+            <li><a href="#">Информация</a></li>
+            <li><a href="#">Фото и видео</a></li>
+              <li class="logo"><a href="#"><img  src="img/logo2.png" alt="логотип" width="138" height="70"></a> </li>
+            <li><a href="#">Карта штата</a></li>
+            <li><a href="#">Гостиницы</a></li>
         </ul>
-       </nav>           
-    </header>  
+             
+      </nav>           
+    </header>   
       <form action="#" class="hotel-choice clearfix">
       <fieldset class="hotel-description">
          <legend>инфраструктура:</legend>
@@ -33,16 +37,32 @@
            <input type="checkbox" id="motel" name="hoteltype"><label for="motel">мотель</label><br>
            <input type="checkbox" id="apartements" name="hoteltype"><label for="apartements">апартаменты</label>  
       </fieldset> 
-      <fieldset class="hotel-description">
+          
+     <!-- <fieldset class="hotel-description-price">
          <legend>стоимость в сутки (р):</legend>
           
           <input type="number" id="price"><label for="price">от 0</label>
           <input type="number" id="price"><label for="price">до 3000</label>
          
            <input type="submit" value="Показать">
-          </fieldset>
+          </fieldset>-->
       </form> 
-          
+        <!-- фильтр я взяла из демо про фильтр в седоне-->   
+        <div class="filter-range">
+      <div class="filter-range-title">Стоимость в сутки (р):</div>
+      <div class="price-controls">
+        <label class="min-price">от <input type="text" name="min-price" value="0"></label>
+        <label class="max-price">до <input type="text" name="max-price" value="3000"></label>
+      </div>
+      <div class="range-controls">
+        <div class="scale">
+          <div class="bar"></div>
+        </div>
+        <div class="range-toggle range-toggle-min"></div>
+        <div class="range-toggle range-toggle-max"></div>
+      </div>
+      <button class="btn-transparent" type="submit">Показать</button>
+    </div> 
       <div class="sorting">
         <h3 class="sorting-results">найдено:3</h2>
         <h2 class="sorting-type">сортировка:</h2>
@@ -97,21 +117,23 @@
       
       </section>
           
-      <footer class="main-footer clearfix">
-        <section class="footer-contacts">
+     <footer class="main-footer">
+        
+        <section class="footer-contacts footer-section">
          #visitsedona
         </section>
-        <section class="footer-social">
+        <section class="footer-social footer-section">
           
           <a class="social-btn social-btn-tw" href="#">twitter</a>
           <a class="social-btn social-btn-fb" href="#">facebook</a>
           <a class="social-btn social-btn-ytub" href="#">youtube</a>
         </section>
-        <section class="footer-copyright">
+        <section class="footer-copyright footer-section">
           <span>website by</span>
-         <a class="btn" href="#"><img src="img/logohtml.png"></a>
+          
+          <a class="btn" href="#"><img src="img/logohtml.png" alt="логотип"></a>
         </section> 
-    </footer>
+     </footer>
   </div>   
  </body>
 </html>

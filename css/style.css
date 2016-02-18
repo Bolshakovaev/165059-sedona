@@ -28,7 +28,7 @@ ul, ol, li {
     display: table;
     clear: both;
 }
-.main-navigation {   
+.main {   
     background: url(../img/background_main.jpg) no-repeat;
     background-size: 100%;
    height: 512px; 
@@ -96,6 +96,10 @@ ul, ol, li {
    padding-top: 56px;
     
 }
+.illustrated-left p{
+   padding-right: 554px;
+    
+}
 .illustrated-left{
     
     box-sizing:border-box;
@@ -109,7 +113,7 @@ ul, ol, li {
     background-repeat: no-repeat; 
     background-size:66% auto;
 }
-/*картинка опять вставилась неправильно*/
+/*Саша, картинка все равно не вставляется как надо. И всё поехало*/
 
 .icon-description{
     background-color: white;
@@ -185,7 +189,7 @@ ul, ol, li {
 .reasons{
     padding: 0;
 }
-
+/*illustrated right я поменяю, когда разберусь с illustrated left*/
 .illustrated-right {
     background-color: #81b3d2;
     text-align: center; 
@@ -202,13 +206,7 @@ ul, ol, li {
 }
 
 
-.interest {
-    margin-right: auto;
-    margin-left: auto;
-    text-align: center;
-    
-    margin-bottom: 35px;
-    }
+
 
 .illustrated {
     line-height: 21px;
@@ -224,6 +222,15 @@ ul, ol, li {
     line-height: 21px;
     font-size: 14px;
 }
+.interest {
+    position: relative;
+
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    
+    margin-bottom: 35px;
+    }
 .interest h2{
     font-size: 30px;
     line-height: 24px;
@@ -235,7 +242,7 @@ ul, ol, li {
 .booking {
     position: absolute;
     left: 50%;
-    top: 2084px;
+    top: 350px;
    margin: 0;
     margin-left: -284px;
     width: 568px;
@@ -249,6 +256,7 @@ ul, ol, li {
     background-color: #766357;
    padding: 35px 140px;
     font-size: 21px;
+    margin:0;
 }
 
 .booking-form input{ 
@@ -265,14 +273,15 @@ ul, ol, li {
     text-transform: uppercase;
     float: right; 
    clear: right;
-   /*Саша, вопросы по форме: как поднять последний блок? и блок сам стал уже почему? и не могу никак убрать отступ сверху над коричневым блоком*/
+   
 }
- #adult, #child {
+/*тут теперь вообще перестала меняться ширина. Последние два инпута должны лежать на одной строке, у меня не получается последний инпут передвинуть на одну строку с предыдущим*/
+ .booking-form input:nth-child(3), .booking-form input:nth-child(4){ 
     
      width: 115px;
      
-}
-#child {
+} 
+.booking-form input:nth-child(4){
     margin-left: 0;
 }
 .booking-form .btn{
@@ -282,6 +291,7 @@ ul, ol, li {
     margin-bottom: 55px;
     font-size: 21px;
     background-color: #81b3d2;
+    border: none;
 }
 .booking-form label{
     display: block;
@@ -289,28 +299,80 @@ ul, ol, li {
     margin-left: 55px;
     
 }
-
-/*.hotel-description {  
+.hotel-choice{
+    background-color: #ffffff;
+    background-image: url(../img/inner%20background.jpg);
+    background-repeat: no-repeat;
+    background-position: center; 
+    color: white;
+    
+}
+.hotel-description {  
     float: left;
    
     padding-left: 70px;
     padding-top: 30px;
-   
-    background-color: dodgerblue; 
+   border: none;
+    font-size: 16px;
+    
 }
 .hotel-description legend{  
     float: left;
    width: 100%;
+    font-weight: bold;
     
 }
-.triangle, .sorting {
+
+.triangle {
     width: 85px; 
     background-color: green;
 }
+
 .hotel {
     width: 85px; 
     background-color: mistyrose;
-}*/
+}
+.sorting {
+    background-color: white;
+    width: 100%;
+    margin-left: 45px;
+} 45+120+35+80+12+35
+.sorting-results {
+    float: left;
+    width: 120px;
+    margin-top: 35px;
+    margin-right: 35px;
+}
+/*как правильно подобрать размеры в сортировке sorting?*/
+.sorting-type {
+    float: left;
+    width: 80px;
+    margin-left: 12px;
+    margin-right: 35px;
+}
+.sorting-items ul{
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    list-style: none;
+    text-align: center;
+    line-height: 12px; 
+}
+.sorting-items li{
+    float: left;
+    width: 80px;
+    margin-right: 4px;
+}
+.sorting-items a{
+     display: block;
+   
+   font-size: 14px;
+   color:#000000; 
+   text-decoration: none;
+}
+.hotel-results {
+    /*тут как правильно расставить? каждый отдельный класс через флоат?*/
+}
 .main-footer {
    margin-top: 50px;
     background-color: chartreuse;
@@ -320,6 +382,145 @@ ul, ol, li {
     width: 33.33333%;
     text-align: center;
 }
+.filter-range {
+  position: absolute; /*тут правильно задавать положение этого фильтра через position absolute?*/
+    top: 10px;
+    left: 1100px;
+    width: 225px;
+  margin: 50px auto; 
 
+  color: white;
+  text-transform: uppercase;
+    background-color: black;
+}
+
+.filter-range-title {
+  margin-bottom: 9px;
+
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.price-controls {
+  position: relative;
+  
+  height: 36px;
+  margin-bottom: 20px;
+
+  font-size: 0;
+
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+}
+
+.price-controls::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 2px;
+  height: 22px;
+
+  background: #ffffff;
+  transform: translate(-50%, -50%);
+}
+
+.price-controls label {
+  display: inline-block;
+
+  font-size: 14px;
+  line-height: 38px;
+  vertical-align: top;
+
+  cursor: pointer;
+}
+
+.price-controls .min-price,
+.price-controls .max-price {
+  width: 90px;
+  padding-left: 65px;
+}
+
+.price-controls input {
+  width: 50px;
+  margin: 0;
+
+  color: inherit;
+  font: inherit;
+
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.range-controls {
+  position: relative;
+
+  margin-bottom: 32px;
+}
+
+.range-controls .scale {
+  height: 2px;
+
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.range-controls .bar {
+  width: 80%;
+  height: 2px;
+
+  background: #ffffff;
+}
+
+.range-toggle {
+  position: absolute;
+  top: -9px;
+
+  width: 4px;
+  height: 4px;
+
+  background: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  cursor: pointer;
+}
+
+.range-toggle:hover {
+  background: #1c4f80;
+}
+
+.range-toggle-min {
+  left: 0;
+}
+
+.range-toggle-max {
+  left: 80%;
+}
+
+.btn-transparent {
+  display: block;
+  margin: 0 auto;
+  padding: 6px 35px;
+
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+  text-transform: uppercase;
+
+  background: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+}
+
+.btn-transparent:hover {
+  color: #000000;
+
+  background: #ffffff;
+}
 
 
