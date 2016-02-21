@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="ru">
-
   <head>
     <meta charset="utf-8">
-    <title>Седона главная страница</title>
+    <title>Седона внутренняя страница</title>
     <link rel="stylesheet" href="css/style.css">
       <link rel="stylesheet" href="css/normalize.css">
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:700,400&subset=latin,cyrillic">
-     
+     <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+      <script src="js/script.js"></script>
+    <script src="js/jquery.js"></script>
   </head>
   <body>
     <div class="container">
@@ -47,7 +48,7 @@
            <input type="submit" value="Показать">
           </fieldset>-->
       </form> 
-        <!-- фильтр я взяла из демо про фильтр в седоне-->   
+         
         <div class="filter-range">
       <div class="filter-range-title">Стоимость в сутки (р):</div>
       <div class="price-controls">
@@ -63,7 +64,7 @@
       </div>
       <button class="btn-transparent" type="submit">Показать</button>
     </div> 
-      <div class="sorting">
+      <div class="sorting clearfix">
         <h3 class="sorting-results">найдено:3</h2>
         <h2 class="sorting-type">сортировка:</h2>
         <ul class="sorting-items">
@@ -71,71 +72,79 @@
           <li><a href="#"> по типу</a> </li>
             <li><a href="a">по рейтингу</a></li>  
         </ul>    
-      </div>
+     
       <ul class="triangle">
           <li><a href="a">&#9651;</a></li>
           <li><a href="">&#9660;</a></li>    
       </ul>    
-     
+      </div>
       <section class="hotel-results">
       <ul>
-          <li class="hotel">
+          <li class="hotel clearfix">
+             <img src="http://placehold.it" alt="звездочки" class="stars">
+              <div class="hotel-rating">рейтинг:8.5</div>
+              
+              <img src="img/amara.jpg" alt="amara" class="hotel-picture">
               <span class="hotel-name">amara resort &amp; spa</span>
-              <img src="img/amara.jpg" alt="amara">
-              <div class="hotel-price">гостиница</div>
-              <div class="hotel-price">  от 3500 р.</div>
-               <a href="#" type="btn">подробнее</a>
-              <a href="#" type="btn">забронировать</a>
-              <img src="http://placehold.it/150x100" alt="звездочки">
-              <div class="hotel-rating">рейтинг</div>
-              <div class="hotel-rating">8.5</div>
+              
+              <div class="hotel-price accomodation-type">гостиница</div>
+              <div class="hotel-price roubles">  от 3500 р.</div>
+               <a href="#" type="btn" class="hotel-btn details">подробнее</a>
+              <a href="#" type="btn" class="hotel-btn book">забронировать</a>
+              
           </li>
-          <li class="hotel">
+          <li class="hotel clearfix">
+             <img src="http://placehold.it" alt="звездочки" class="stars">
+              <div class="hotel-rating">рейтинг:8.9</div>
+               
+              <img src="img/desert.jpg" alt="desert" class="hotel-picture">
               <span class="hotel-name">desert quail inn</span>
-              <img src="img/desert.jpg" alt="desert">
-             <div class="hotel-price">мотель</div>
-              <div class="hotel-price">  от 2000 р.</div>                      
-              <a href="#" type="btn">подробнее</a>
-              <a href="#" type="btn">забронировать</a>
-              <img src="http://placehold.it/150x100" alt="звездочки">
-              <div class="hotel-rating">рейтинг</div>
-               <div class="hotel-rating">8.9</div>
+              
+             <div class="hotel-price accomodation-type">мотель</div>
+              <div class="hotel-price roubles">  от 2000 р.</div>                      
+              <a href="#" type="btn" class="hotel-btn details">подробнее</a>
+              <a href="#" type="btn" class="hotel-btn book">забронировать</a>
+              
           </li>
-          <li class="hotel">
+          <li class="hotel clearfix">
+             <img src="http://placehold.it" alt="звездочки" class="stars">
+              <div class="hotel-rating">рейтинг:9.2</div>
+              
+             <img src="img/villas.jpg" alt="villas" class="hotel-picture">
               <span class="hotel-name">villas at poco diablo</span>
-              <img src="img/villas.jpg" alt="villas">
-             <div class="hotel-price">апартаменты</div>
-              <div class="hotel-price">  от 4000 р.</div>            
-              <a href="#" type="btn">подробнее</a>
-              <a href="#" type="btn">забронировать</a>
-              <img src="http://placehold.it/150x100" alt="звездочки"><!--звездочки надо тоже вырезать как картинку?-->
-              <div class="hotel-rating">рейтинг</div>
-              <div class="hotel-rating">9.2</div>
+              
+             <div class="hotel-price accomodation-type">апартаменты</div>
+              <div class="hotel-price roubles">  от 4000 р.</div>            
+              <a href="#" type="btn" class="hotel-btn details">подробнее</a>
+              <a href="#" type="btn" class="hotel-btn book">забронировать</a>
+              
           </li>
        </ul>
       
       
       </section>
           
-     <footer class="main-footer">
+    <footer class="main-footer">
         
         <section class="footer-contacts footer-section">
          #visitsedona
         </section>
         <section class="footer-social footer-section">
-          
-          <a class="social-btn social-btn-tw" href="#">twitter</a>
-          <a class="social-btn social-btn-fb" href="#">facebook</a>
-          <a class="social-btn social-btn-ytub" href="#">youtube</a>
+          <a class="social-btn social-btn-tw" href="#">twitter<span class="icon-twitter"></span></a>
+          <a class="social-btn social-btn-fb" href="#">facebook<span class="icon-facebook"></span></a>
+          <a class="social-btn social-btn-ytub" href="#">youtube<span class="icon-youtube"></span></a>
         </section>
         <section class="footer-copyright footer-section">
           <span>website by</span>
-          
+          <!-- alt -->
           <a class="btn" href="#"><img src="img/logohtml.png" alt="логотип"></a>
         </section> 
      </footer>
   </div>   
  </body>
+    
+    
+    
 </html>
           
       

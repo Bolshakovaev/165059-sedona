@@ -1,27 +1,26 @@
 <!DOCTYPE html>
 <html lang="ru">
-
   <head>
     <meta charset="utf-8">
     <title>Седона главная страница</title>
     <link rel="stylesheet" href="css/style.css">
       <link rel="stylesheet" href="css/normalize.css">
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:700,400&subset=latin,cyrillic">
-     
+     <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+      <script src="js/script.js"></script>
+    <script src="js/jquery.js"></script>
   </head>
   <body>
     <div class="container">
       <header class="main-header">
       <nav class="main-navigation main">
-        
           <ul class="clearfix">
             <li><a href="#">Информация</a></li>
             <li><a href="#">Фото и видео</a></li>
               <li class="logo"><a href="#"><img  src="img/logo2.png" alt="логотип" width="138" height="70"></a> </li>
             <li><a href="#">Карта штата</a></li>
             <li><a href="#">Гостиницы</a></li>
-        </ul>
-             
+          </ul>             
       </nav>           
     </header>  
     <main class="content">        
@@ -31,7 +30,7 @@
            <li class="illustrated illustrated-left clearfix">
               <h3>настоящий городок </h3>              
                <p>седона не аттракцион для туристов, там течет настоящая жизнь</p>            
-             <ul class="clearfix icon-description">                    
+             <ul class="clearfix icons">                    
                 <li class="icon accommodation">
                    <h3>жилье</h3>
                    <p> рекомендуем пожить в настоящем мотеле, все как в кино</p>
@@ -45,14 +44,11 @@
                     <p> не только китайского,но и местного производства!</p>
                   </li> 
              </ul>
-           </li>   
-        
-         <li class="illustrated illustrated-right clearfix">
-            <img src="img/mountain.jpg"  alt="Горы Седоны">
-             <h3>там есть<br>мост дьявола</h3>
+           </li>           
+         <li class="illustrated illustrated-right clearfix">            
+            <h3>там есть<br>мост дьявола</h3>
             <p>да, по нему можно пройти!<br>если конечно вы осмелитесь</p>          
-         </li>
-           
+         </li>           
          <li class="reason">
             <h3>небольшая площадь </h3>
             <p>все достопримечательности находятся очень близко</p>
@@ -65,27 +61,25 @@
             <h3>мало<br>туристов</h3>
             <p>седона не аттракцион для туристов, там течет настоящая жизнь</p>           
          </li>             
-        </ol>
-        
-    <div class="interest"> 
-        
+        </ol>        
+    <div class="interest">        
         <h2>заинтересовались?</h2>
         <p>укажите предполагаемые даты поездки, <br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
-        <img src="img/map.png" alt="карта седоны">
-        
-    
-    <article class="booking">
-          <h3>поиск гостиницы в седоне</h3>
-          
+        <img src="img/map.png" alt="карта седоны"> 
+      <article class="booking">
+          <h3>поиск гостиницы в седоне</h3>          
         <form class="booking-form clearfix" action="https://echo.htmlacademy.ru" method="post">
-          <input type="date" id="checkin" name="check-in" value="" placeholder="Дата заезда"> <label for="checkin">Дата заезда:</label> 
-          <input type="date" id="checkout" name="check-out" value="" placeholder="Дата выезда"> <label for="checkout">Дата выезда: </label> 
-          <input type="number" id="adult" name="adult" value="" placeholder="Взрослые">  <label for="adult">Взрослые: </label> 
-          <input type="number" id="child" value="" placeholder="Дети"><label for="child"> Дети: </label>
+          <input type="date" value="14.02.2016" class="longinput checkin" id="checkin" name="check-in" value="" placeholder="Дата заезда"> <label for="checkin">Дата заезда:</label> 
+          <input type="date" id="checkout" class="longinput  checkout" name="check-out" value="" placeholder="Дата выезда"> <label for="checkout">Дата выезда: </label> 
+         <div class="clearfix"> 
+           <label class="counter_label" for="adult">Взрослые: </label> 
+           <input type="number" class="counter_input" id="adult" name="adult" value="" placeholder="Взрослые">  
+           <label class="counter_label" for="child"> Дети: </label>   <input type="number" class="counter_input" id="child" value="" placeholder="Дети">            </div>
           <button class="btn" type="submit">найти</button>
         </form>
-     </article>
+      </article>
     </div>
+        <script src="js/script.js"></script>
     </main>
     <footer class="main-footer">
         
@@ -93,10 +87,9 @@
          #visitsedona
         </section>
         <section class="footer-social footer-section">
-          
-          <a class="social-btn social-btn-tw" href="#">twitter</a>
-          <a class="social-btn social-btn-fb" href="#">facebook</a>
-          <a class="social-btn social-btn-ytub" href="#">youtube</a>
+          <a class="social-btn social-btn-tw" href="#">twitter<span class="icon-twitter"></span></a>
+          <a class="social-btn social-btn-fb" href="#">facebook<span class="icon-facebook"></span></a>
+          <a class="social-btn social-btn-ytub" href="#">youtube<span class="icon-youtube"></span></a>
         </section>
         <section class="footer-copyright footer-section">
           <span>website by</span>
@@ -106,4 +99,8 @@
      </footer>
    </div>
   </body>
+    
+    
+    
+    
 </html>
