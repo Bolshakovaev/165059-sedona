@@ -14,9 +14,9 @@
           <ul class="clearfix">
             <li><a href="#">Информация</a></li>
             <li><a href="#">Фото и видео</a></li>
-              <li class="logo"><a href="#"><img  src="img/logo2.png" alt="логотип" width="138" height="70"></a> </li>
+            <li class="logo"><a href="#"><img  src="img/logo2.png" alt="логотип" width="138" height="70"></a> </li>
             <li><a href="#">Карта штата</a></li>
-            <li><a href="#">Гостиницы</a></li>
+            <li><a href="inner.html">Гостиницы</a></li>
           </ul>             
       </nav>           
     </header>  
@@ -30,15 +30,15 @@
              <ul class="clearfix icons">                    
                 <li class="icon accommodation">
                    <h3>жилье</h3>
-                   <p> рекомендуем пожить в настоящем мотеле, все как в кино</p>
+                   <p> рекомендуем пожить в настоящем мотеле, все как в кино!</p>
                  </li>  
                  <li class="icon food">
                     <h3>еда</h3>
-                    <p> всегда заказывайте фирменный бургер вы не разочаруетесь!</p>
+                    <p> всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
                   </li>   
                   <li class="icon souvenirs">
                     <h3>сувениры</h3>
-                    <p> не только китайского,но и местного производства!</p>
+                    <p> не только китайского,<br> но и местного производства!</p>
                   </li> 
              </ul>
            </li>           
@@ -56,7 +56,7 @@
          </li>
          <li class="reason">
             <h3>мало<br>туристов</h3>
-            <p>седона не аттракцион для туристов, там течет настоящая жизнь</p>           
+            <p>большинство едет в гранд каньон и толпится там</p>           
          </li>             
         </ol>        
     <div class="interest">        
@@ -66,11 +66,15 @@
       <article class="booking">
         <h3>поиск гостиницы в седоне</h3>          
         <form class="booking-form clearfix" action="https://echo.htmlacademy.ru" method="post">
-        <input type="date" value="14.02.2016" class="longinput checkin" id="checkin" name="check-in" value="" placeholder="Дата заезда"> <label class="icon-calendar" for="checkin">Дата заезда:</label> 
-        <input type="date" id="checkout" class="longinput  checkout" name="check-out" value="" placeholder="Дата выезда"> <label class="icon-calendar" for="checkout">Дата выезда: </label> 
+        <input type="date" value="14.02.2016" class="longinput checkin calendar" id="checkin" name="check-in" value="" placeholder="Дата заезда"> <label for="checkin">Дата заезда:</label> 
+        <input type="date" id="checkout" class="longinput  checkout calendar" name="check-out" value="" placeholder="Дата выезда"> <label  for="checkout">Дата выезда: </label> 
         <div class="clearfix form-smallerinputs">            
            <label class="counter_label" for="adult">Взрослые: </label> 
-           <div class="counter"><span class="minus icon-minus"></span><input type="number" class="counter_input" id="adult" name="adult" value="0"><span class="plus icon-plus"></span></div>
+           <div class="counter">
+               <span class="minus icon-minus"></span>
+               <input type="number" class="counter_input" id="adult" name="adult" value="2">
+               <span class="plus icon-plus"></span>
+            </div>
            <label class="counter_label" for="child"> Дети: </label>  
            <div class="counter">
              <span class="minus icon-minus"></span> 
@@ -83,7 +87,7 @@
       </article>
     </div>        
     </main>
-    <footer class="main-footer">
+    <footer class="main-footer index">
         
         <section class="footer-contacts footer-section">
          #visitsedona

@@ -70,6 +70,7 @@ h1, h2,h3 {
 .main-navigation a:active {
     color: #766357;
 }
+
  .logo{
     position: absolute;    
     top: -21px;
@@ -93,29 +94,22 @@ h1, h2,h3 {
     text-align: center; 
     margin-bottom: 35px;
     font-size: 21px;
+    line-height: 26px;
+    font-weight: bold;
 }
 .title {
     margin-right: auto;
     margin-left: auto;
     text-align: center;
     font-size: 14px;
+    color: #5c5c5c;
+    line-height: 26px;
+    margin-bottom: 60px;
 }
-.reason {
-    float:left;
-    min-height: 255px;
-    width: 33.33333%;
-    background-color:#eeeeee;
-    list-style: none;
-    text-align: center;
-}
-.reason:last-child{
-    margin-right: 0;
-}
-.reason p {
-    font-size: 14px;
-}
+
 .reasons {
     counter-reset:reason-number;
+    
 }
 .reasons>li {
     counter-increment: reason-number; 
@@ -149,6 +143,33 @@ h1, h2,h3 {
    position:relative;
    z-index:2;
 }
+
+.reason {
+    float:left;
+    min-height: 255px;
+    width: 33.33333%;
+    background-color:#eeeeee;
+    list-style: none;
+    text-align: center;
+    
+}
+.reason:last-child{
+    margin-right: 0;
+}
+.reason h3 { /*тут почему-то это не срабатывает и надписи по середине не выравниваются*/
+    width: 120px;
+    margin-left: auto;
+    margin-right: auto;
+   
+}
+.reason p {
+    font-size: 14px;
+    color: #686868;
+    width: 266px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: normal;
+}
 li.reason>p {
    color:#979797;
 }
@@ -174,6 +195,7 @@ li.reason>p::before {
     background-image: url(../img/flowers.jpg); 
     background-position: right top; 
 }
+
 .illustrated-right{
     background-image: url(../img/mountain.jpg); 
     background-position: left top; 
@@ -189,11 +211,34 @@ li.reason>p::before {
 }
 
 .illustrated-left h3, .illustrated-left p{
-   padding-right: 66%;  	
+   padding-right: 66%;  
+    
 }
 .illustrated-right h3, .illustrated-right p{
    padding-left: 66%;
 }
+.illustrated-left h3 {
+   padding-left:137px;
+    width: 130px;
+    line-height: 21px;
+       
+}
+.illustrated-left p {
+    font-weight: normal;
+    width: 280px;
+    padding-left: 60px;
+}
+.illustrated-right h3 {
+   
+   
+    line-height: 21px;
+       
+}
+.illustrated-right p {
+    font-weight: normal;
+   
+}
+
 .icons{
    background-color: white;
    list-style: none;
@@ -236,21 +281,27 @@ icon h3 {
     background-image: url(../img/food.png);
     background-repeat: no-repeat;
     background-position: center 62px;
+    padding-right: 0;
+    padding-left: 0;
 }
 .souvenirs {
     background-color: #ffffff;
     background-image: url(../img/souvenirs.png);
     background-repeat: no-repeat;
     background-position: center 62px; 
+    
 }
+
 .icon h3{
     line-height: 21px;
-    padding-right:0;
+    
     }
 .icon p {
     line-height: 21px;
     font-size: 14px;
-    padding-right:0;
+    width: 290px;
+    margin-right: auto;
+    margin-left: auto;
 }
 .interest {
     position: relative;
@@ -258,19 +309,26 @@ icon h3 {
     margin-left: auto;
     text-align: center;
     margin-bottom: 35px;
+    
  }
 .interest h2{
     font-size: 30px;
     line-height: 24px;
+    padding-top: 300px;
+    
 }
 .interest p{
     font-size: 14px;
     line-height: 24px;
 }
+.interest img {
+    position: relative;
+    top: 170px;
+}
 .booking {
     position: absolute;
     left: 50%;
-    top: 350px;
+    top: 450px;
     margin: 0;
     margin-left: -284px;
     width: 568px;
@@ -281,7 +339,7 @@ icon h3 {
 .booking h3{
     color: white;
     background-color: #766357;
-    padding: 35px 140px;
+    padding: 35px 120px;
     font-size: 21px;
     margin:0;
    -webkit-user-select: none; 
@@ -297,44 +355,62 @@ icon h3 {
 .booking-form-show {
     display: block;
 }*/
-
+.booking-form {
+    
+    padding:  56px 50px;
+}
 .booking-form input{ 
     padding: 14px 16px;
     background-color: #f2f2f2;
-    font-size: 14px;
+    font-size: 14px;    
     font-family:"PT Sans", Arial, serif;
     border: none;
     box-sizing: border-box;
     text-transform: uppercase;     
 }
+.booking-form label {
+    font-weight: bold;
+    font-size: 14px;
+    
+    margin-top: 10px;
+    float: left;
+}
 .booking-form .longinput {
     width: 345px;
     margin-bottom: 32px;
-    margin-left: 16px;
-    margin-right: 55px;
+   
     float: right; 
     clear: right;
 }
 
 .booking-form .counter_label {
-    float: left;
+    float: left;    
 }
-.booking-form label.icon-calendar::before {
-  /* календарик можно оформить здесь */
+
+.booking-form .calendar::after {
+  
+   display: block;
+   content: "\e800";   
+   font-family: "symbols-sedona";
+   font-size: 19px;
+   text-align: right;
+   color: #c2c2c2;
 }
 
 .booking-form .counter {
     float: left;
-    width: 115px;
+    width: 130px;
     margin: 0;
+    background-color: #f2f2f2;
+    margin-bottom: 55px;
+    margin-left: 45px;
+    padding: 0;
 }
 
 .form-smallerinputs {
   clear:both; 
 }
-.counter_input {
-  width:35px; 
-}
+
 /* в критериях есть требование - не больше 3 элементов в селекторах */
 .booking-form .counter input, .counter .minus, .counter .plus {
     width: 40px;
@@ -345,13 +421,15 @@ icon h3 {
     width: 37.5px;
 }
 .booking-form .btn{
-    
+    color: white;
     width: 450px;
     padding:  17px 195px;
-    margin-bottom: 55px;
+   
     font-size: 21px;
     background-color: #81b3d2;
     border: none;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 .booking-form .btn:hover {
     background-color: #669ec0;
@@ -742,6 +820,9 @@ icon h3 {
 }
 .main-footer {
    margin-top: 50px;   
+}
+.index {
+     margin-top: 200px; 
 }
 .footer-section {
     float: left;
