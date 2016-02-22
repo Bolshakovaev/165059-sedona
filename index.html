@@ -3,12 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>Седона главная страница</title>
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-      <link rel="stylesheet" href="css/normalize.css">
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:700,400&subset=latin,cyrillic">
-     <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
-      <script src="js/script.js"></script>
-    <script src="js/jquery.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:700,400&subset=latin,cyrillic">
   </head>
   <body>
     <div class="container">
@@ -67,19 +64,24 @@
         <p>укажите предполагаемые даты поездки, <br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
         <img src="img/map.png" alt="карта седоны"> 
       <article class="booking">
-          <h3>поиск гостиницы в седоне</h3>          
+        <h3>поиск гостиницы в седоне</h3>          
         <form class="booking-form clearfix" action="https://echo.htmlacademy.ru" method="post">
-          <input type="date" value="14.02.2016" class="longinput checkin" id="checkin" name="check-in" value="" placeholder="Дата заезда"> <label for="checkin">Дата заезда:</label> 
-          <input type="date" id="checkout" class="longinput  checkout" name="check-out" value="" placeholder="Дата выезда"> <label for="checkout">Дата выезда: </label> 
-         <div class="clearfix"> 
+        <input type="date" value="14.02.2016" class="longinput checkin" id="checkin" name="check-in" value="" placeholder="Дата заезда"> <label class="icon-calendar" for="checkin">Дата заезда:</label> 
+        <input type="date" id="checkout" class="longinput  checkout" name="check-out" value="" placeholder="Дата выезда"> <label class="icon-calendar" for="checkout">Дата выезда: </label> 
+        <div class="clearfix form-smallerinputs">            
            <label class="counter_label" for="adult">Взрослые: </label> 
-           <input type="number" class="counter_input" id="adult" name="adult" value="" placeholder="Взрослые">  
-           <label class="counter_label" for="child"> Дети: </label>   <input type="number" class="counter_input" id="child" value="" placeholder="Дети">            </div>
+           <div class="counter"><span class="minus icon-minus"></span><input type="number" class="counter_input" id="adult" name="adult" value="0"><span class="plus icon-plus"></span></div>
+           <label class="counter_label" for="child"> Дети: </label>  
+           <div class="counter">
+             <span class="minus icon-minus"></span> 
+             <input type="number" class="counter_input" id="child" value="0" name="children">
+             <span class="plus icon-plus"></span>
+           </div>
+         </div>
           <button class="btn" type="submit">найти</button>
         </form>
       </article>
-    </div>
-        <script src="js/script.js"></script>
+    </div>        
     </main>
     <footer class="main-footer">
         
@@ -97,7 +99,8 @@
           <a class="btn" href="#"><img src="img/logohtml.png" alt="логотип"></a>
         </section> 
      </footer>
-   </div>
+   <script src="js/script.js"> 
+       </script>
   </body>
     
     

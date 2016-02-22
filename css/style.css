@@ -1,3 +1,11 @@
+@font-face {
+  font-weight: normal;
+  font-style: normal;
+
+  font-family: "symbols-sedona";
+  src: url("../fonts/symbols-sedona.woff") format("woff"),
+       url("../fonts/symbols-sedona.woff2") format("woff2");
+}
 html,
 body {
   
@@ -6,12 +14,12 @@ body {
     background-color: white;
 }
 body {
-font-size: 21px;
-font-family:"PT Sans", Arial, serif;
-font-weight: bold;
-color: black;
-line-height: 26px;
-    text-transform: uppercase;
+   font-size: 21px;
+   font-family:"PT Sans", Arial, serif;
+   font-weight: bold;
+   color: black;
+   line-height: 26px;
+   text-transform: uppercase;
 }
 ul, ol, li {
     margin:0; 
@@ -35,8 +43,7 @@ h1, h2,h3 {
 .main {   
     background: url(../img/background_main.jpg) no-repeat;
     background-size: 100%;
-   height: 512px; 
-    
+   height: 512px;     
 }
 .main-navigation ul{
     margin: 0;
@@ -113,11 +120,9 @@ h1, h2,h3 {
 .reasons>li {
     counter-increment: reason-number; 
 }
-
 .reasons h3 {
     position: relative;
 }
-
 /* черточка */
 .reasons>li>h3::before {
    content: '';
@@ -143,8 +148,7 @@ h1, h2,h3 {
    background-color:#81b3d2;
    position:relative;
    z-index:2;
-} 
-/* .reason - серый блок */
+}
 li.reason>p {
    color:#979797;
 }
@@ -166,15 +170,12 @@ li.reason>p::before {
     box-sizing:border-box;    
     background-color: #81b3d2; 
 }
-
-
-
 .illustrated-left{
-    background-image: url(https://raw.githubusercontent.com/Bolshakovaev/165059-sedona/master/img/flowers.jpg); 
+    background-image: url(../img/flowers.jpg); 
     background-position: right top; 
 }
 .illustrated-right{
-    background-image: url(https://raw.githubusercontent.com/Bolshakovaev/165059-sedona/master/img/mountain.jpg); 
+    background-image: url(../img/mountain.jpg); 
     background-position: left top; 
 }
 
@@ -204,15 +205,31 @@ li.reason>p::before {
    padding-top: 163px;
    width: 33.3333%;
    color: black;
+    padding-right: 0;
+    
  }
 .icon:last-child{
     margin-right: 0;    
+}
+icon h3 {
+    color:#171717;
+    font-size: 21px;
+    line-height: 21px;
+    font-weight: bold;
+}
+.icon p{
+    font-size: 14px;
+    line-height: 21px;
+    color: #858585;
 }
 .accommodation {
     background-color :#ffffff;
     background-image: url(../img/accomodation.png);
     background-repeat: no-repeat;
     background-position: center 62px;
+
+   
+   
 }
 .food {
     background-color: #ffffff;
@@ -225,9 +242,6 @@ li.reason>p::before {
     background-image: url(../img/souvenirs.png);
     background-repeat: no-repeat;
     background-position: center 62px; 
-}
-.icon{
-    padding-right: 0;
 }
 .icon h3{
     line-height: 21px;
@@ -276,6 +290,14 @@ li.reason>p::before {
     user-select: none;
     cursor:pointer;
 }
+
+/*.booking-form {
+    display: none;
+}
+.booking-form-show {
+    display: block;
+}*/
+
 .booking-form input{ 
     padding: 14px 16px;
     background-color: #f2f2f2;
@@ -297,13 +319,24 @@ li.reason>p::before {
 .booking-form .counter_label {
     float: left;
 }
+.booking-form label.icon-calendar::before {
+  /* календарик можно оформить здесь */
+}
+
 .booking-form .counter {
     float: left;
     width: 115px;
     margin: 0;
 }
 
-.booking-form .counter input, .booking-form .counter .minus, .booking-form .counter .plus {
+.form-smallerinputs {
+  clear:both; 
+}
+.counter_input {
+  width:35px; 
+}
+/* в критериях есть требование - не больше 3 элементов в селекторах */
+.booking-form .counter input, .counter .minus, .counter .plus {
     width: 40px;
     display: inline-block;
 }
@@ -311,11 +344,8 @@ li.reason>p::before {
 .booking-form .counter .minus, .booking-form .counter .plus {
     width: 37.5px;
 }
- .social-btn .hidden {
-     display: none;
-}
-/*.booking-form .btn{
-    clear:both;
+.booking-form .btn{
+    
     width: 450px;
     padding:  17px 195px;
     margin-bottom: 55px;
@@ -323,42 +353,20 @@ li.reason>p::before {
     background-color: #81b3d2;
     border: none;
 }
-.booking-form label{
-    display: block;
-    line-height: 75px;
-    /* margin-left: 55px; */
-    
-}*//*что это? это надо?*/
-.hotel-choice{
-    background-color: #ffffff;
-    background-image: url(../img/inner%20background.jpg);
-    background-repeat: no-repeat;
-    background-position: center; 
-    color: white;
-    
+.booking-form .btn:hover {
+    background-color: #669ec0;
 }
-.hotel-description {  
-    float: left;
-   
-    padding-left: 70px;
-    padding-top: 30px;
-   border: none;
-    font-size: 16px;
-    
+.booking-form .btn:hover {
+    background-color: #669ec0;
+    color:#88b6d1;
 }
-.hotel-description legend{  
-    float: left;
-   width: 100%;
-    font-weight: bold;
-    
+
+ .social-btn .hidden {
+     display: none;
 }
 
 
 
-.hotel {
-    width: 85px; 
-    background-color: mistyrose;
-}
 .sorting {
     background-color: white;
     width: 100%; 
@@ -369,17 +377,15 @@ li.reason>p::before {
     display: inline-block;
     width: 135px;
     margin-top: 35px;
-    margin-left: 73px;
-    
+    margin-left: 73px;    
     font-size: 21px;
     line-height: 26px;    
 }
-/*как правильно подобрать размеры в сортировке sorting?отправляйся от того, размеры каких блоков, по твоему мнению, фиксированы, какие нет. т.е. что произойдет, если в блоке будет больше текста, куда он пойдет, вправо или вниз? если вправо - то блок можно делать фиксированным по ширине, если вниз, то наоборот. здесь sorting-results, sorting-type и triangles будут, на мой взгляд, иметь фикс-ширину, a sorting-items нет. кстати классы названы так, что не понять, в каком классе что находится  */
+
 .sorting-type {
     display: inline-block;
     width: 110px;
-    margin-left: 30px;
-   
+    margin-left: 30px;   
     font-size: 12px;
     line-height: 18px;    
 }
@@ -390,13 +396,11 @@ li.reason>p::before {
     font-size: 12px;
     line-height: 18px;  
     margin-left: 7px;
-    margin-right: 605px;
-        
+    margin-right: 605px;        
 }
-.sorting-items li{
-   
+.sorting-items li{   
     margin-right: 4px;
-   border-bottom: 1px dotted #81b3d2;
+    border-bottom: 1px dotted #81b3d2;
     display: inline-block;
     vertical-align: top;
 }
@@ -405,53 +409,107 @@ li.reason>p::before {
    color:#b1b1b1;
    text-decoration: none;
 }
-.sorting-items li.current {
-  color:#81b3d2;/*почему-то не поменялся цвет?*/
+.sorting-items .current a{
+  color:#81b3d2;
   border-bottom: none;
 } 
+.sorting-items .current { 
+  border-bottom: none;
+} 
+.sorting-items a:hover{
+    color: #a3c7de;
+}
+.sorting-items a:active{
+    color: black;
+}
 .triangle {
    float: right;
-    width: 50px; 
-    background-color: green;
-    font-size: 14px;
-    
+   width: 35px; 
+   
+   font-size: 14px;
+    margin-right: 73px;
 }
-triangle a{
-    text-decoration: none;
-    color:#81b3d2; 
+.triangle li{
+    display: inline-block;
+    margin-left: 0;
 }
-.hotel-choice {
+.triangle a{
+   text-decoration: none;
+   color:#81b3d2; 
+   display:none;
+}
+
+.triangle li:first-child::before{
+   content: "\25b2";   
+   font-family: "symbols-sedona";
+   font-size: 23px;
+    color: #cccccc;
+}
+.triangle li:nth-child(2)::before{
+   content: "\25bc";   
+   font-family: "symbols-sedona";
+   font-size: 23px;
+    color: #81b3d2;
+}
+
+.hotel-choice{
+    background-color: #ffffff;
     background-image: url(../img/inner%20background.jpg);
     background-repeat: no-repeat;
-    background-position: center;
-    /*background-color: bisque;*/
-    color: white;
-  min-height: 217px;
-}
-.hotel-description {
-   font-size: 16px;
-    line-height: 21px;  
-    padding: 32px 46px;
-}
-.hotel-description label {
-    font-size: 14px;
-    line-height: 21px;  
-}
-.filter-range {
-  position: absolute; 
-    top: 10px;
-    left: 1100px;
-    width: 225px;
-  margin: 50px auto; 
+    background-position: center; 
+    color: white;    
+    min-height: 217px;
+} 
 
-  color: white;
-  text-transform: uppercase;
+
+
+.hotel-description {  
+    float: left;   
+    padding-left: 70px;
+    padding-top: 30px;
+    border: none;
+    font-size: 14px;
+    line-height: 30px;  
+   margin-top: 30px;
+    font-weight: normal;
+    margin-right: 50px;
+}
+.hotel-description legend {
+    font-weight: bold;
+    font-size: 16px;
     
 }
 
-.filter-range-title {
-  margin-bottom: 9px;
+.hotel-description label {
+   margin-top: 35px;
+}
+.hotel-description input[type="checkbox"]{
+    display: none;
+}
+.hotel-description input[type="checkbox"]+label::before{
+   content: "\2610";
+   width: 20px;
+   height: 20px;    
+   font-family: "symbols-sedona";
+    font-size: 26px;
+    margin-right: 20px;
+}
+.hotel-description input[type="checkbox"]:checked+label::before{
+   content: "\2611";
+}
 
+
+.filter-range {
+  float:right; 
+  width: 225px;
+  color: white;
+  text-transform: uppercase; 
+  margin-right: 73px;
+}
+
+.filter-range-title {  
+  margin-top: 30px; 
+  margin-bottom: 9px;
   font-weight: 600;
   font-size: 16px;
   line-height: 21px;
@@ -462,9 +520,7 @@ triangle a{
   
   height: 36px;
   margin-bottom: 20px;
-
   font-size: 0;
-
   border: 2px solid #ffffff;
   border-radius: 2px;
 }
@@ -474,10 +530,8 @@ triangle a{
   position: absolute;
   top: 50%;
   left: 50%;
-
   width: 2px;
   height: 22px;
-
   background: #ffffff;
   transform: translate(-50%, -50%);
 }
@@ -488,23 +542,21 @@ triangle a{
   font-size: 14px;
   line-height: 38px;
   vertical-align: top;
-
   cursor: pointer;
 }
 
 .price-controls .min-price,
 .price-controls .max-price {
-  width: 90px;
-  padding-left: 65px;
+   width: 50%;
+  text-align:center; 
+  float: left;
 }
 
 .price-controls input {
   width: 50px;
   margin: 0;
-
   color: inherit;
   font: inherit;
-
   background: none;
   border: none;
   outline: none;
@@ -512,13 +564,11 @@ triangle a{
 
 .range-controls {
   position: relative;
-
   margin-bottom: 32px;
 }
 
 .range-controls .scale {
   height: 2px;
-
   background: rgba(255, 255, 255, 0.3);
 }
 
@@ -581,10 +631,10 @@ triangle a{
 
 .hotel-results {
    width: 100%;
-   background-color: white; /*не понимаю откуда у меня взялся розовый цвет!*/
+   background-color: white; 
 }
 .hotel {
-   
+   box-sizing:border-box;
     width: 100%;
     margin: 0;
     padding: 30px 73px;
@@ -600,68 +650,84 @@ triangle a{
     float: right;
     width: 112px;
   }
-.hotel-rating {
-    background-color: #fafafa;
-    font-size: 14px;
+.stars {
+    float: right;  
+    
+}
+.stars li{
+    display: inline-block;
+    
+    font-size: 0px;
+}
 
+.stars li::before{
+   display: block;
+    content: "\2605";   
+   font-family: "symbols-sedona";
+   font-size: 19px;
+    text-align: right;
+    color: #81b3d2;
+}
+
+.hotel-rating {
+    background-color: #f2f2f2;
+    font-size: 14px;
+    float:right; 
+    clear: right;
 }
 .hotel-picture {
     float: left;
-    width: 136px;   
+    width: 136px; 
+    margin-right: 30px;
 }
 .hotel-name {
     font-size: 21px;
-    line-height: 26px;
-   display: inline-block;
-   font-weight: bold;
+    line-height: 26px;    
+    font-weight: bold;
     vertical-align: top;
-    margin-left: 30px;
-    text-align: left;
-    width: 260px;
-   margin-right: 520px;
    
-}
-.hotel-name:hover {
-    color: #81b3d2";
-}
-.hotel-price {
-  
-    display: inline-block;    
-   
-    margin-left: 30px;
-    color: #5d5d5d;
-    font-size: 14px;
-    line-height: 21px;
-   
+    text-align: left; 
     
 }
-.accomodation-type {
-    width: 110px;
-    margin-right: 7px;
+.hotel-name:hover {  /*Саша, а название отеля тоже ссылка получается?*/
+    color: #81b3d2";
 }
-.roubles{
-    width: 142px;
-    margin-right: 605px;
+.hotel-name:active {  
+    color: #b2b2b2;
+}
+
+.hotel-price {      
+    color: #5d5d5d;
+    font-size: 14px;
+    line-height: 21px;    
+}
+.accomodation-type {    
+    margin-right: 40px;
+}
+.roubles{   
 }
 
 
 .hotel-btn {
     display: inline-block;
     color: white;
-    margin-left: 30px;
-    margin-right: 705px;
+      
     padding-top: 8px;
     padding-bottom: 8px;
    
 }
 .details {
-     width: 110px;
-   background-color: #81b3d2;
-    margin-left: 30px;
+    width: 110px;
+    background-color: #81b3d2;
+   
     margin-right: 7px;
 }
 .details:hover {
     background-color: #669ec0;
+}
+.details:active {
+    background-color: #5496bd;
+    color: #88b6d1;
 }
 .book {
     width: 142px;
@@ -670,9 +736,12 @@ triangle a{
 .book:hover {
     background-color: #604e43;
 }
+.book:active {
+    background-color:#503e33;
+    color: #857871;
+}
 .main-footer {
-   margin-top: 50px;
-    background-color: chartreuse;
+   margin-top: 50px;   
 }
 .footer-section {
     float: left;
@@ -697,23 +766,20 @@ triangle a{
 }
 
 .social-btn:hover span{
-    background-color: #669ec0; /*что такое down в styleguide?*/
+    background-color: #669ec0;
 }
-.footer-copyright:hover {
-    background-color: #669ec0; 
+.social-btn:active span{
+    background-color: #669ec0;
+    color: #88b6d1;
 }
 .footer-copyright:hover img{
     background-color: #669ec0; 
 }
 
-@font-face {
-  font-weight: normal;
-  font-style: normal;
-
-  font-family: "symbols-sedona";
-  src: url("../fonts/symbols-sedona.woff") format("woff"),
-       url("../fonts/symbols-sedona.woff2") format("woff2");
+.footer-copyright:active img{
+    background-color: #bdbbbc"; 
 }
+
 
 [class^="icon-"]::before,
 [class*=" icon-"]::before {

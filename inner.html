@@ -6,9 +6,7 @@
     <link rel="stylesheet" href="css/style.css">
       <link rel="stylesheet" href="css/normalize.css">
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:700,400&subset=latin,cyrillic">
-     <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
-      <script src="js/script.js"></script>
-    <script src="js/jquery.js"></script>
+     
   </head>
   <body>
     <div class="container">
@@ -25,31 +23,8 @@
              
       </nav>           
     </header>   
-      <form action="#" class="hotel-choice clearfix">
-      <fieldset class="hotel-description">
-         <legend>инфраструктура:</legend>
-          <div> <input type="checkbox" id="pool" name="infrastructure"><label for="pool">бассейн</label></div>
-          <div> <input type="checkbox" id="parking" name="infrastructure"><label for="parking">парковка</label></div>
-          <div><input type="checkbox" id="wifi" name="infrastructure"><label for="wifi">wi-fi</label> </div> 
-      </fieldset> 
-      <fieldset class="hotel-description">
-         <legend>тип жилья:</legend>
-           <input type="checkbox" id="hotel" name="hoteltype"><label for="hotel">гостиница</label><br>
-           <input type="checkbox" id="motel" name="hoteltype"><label for="motel">мотель</label><br>
-           <input type="checkbox" id="apartements" name="hoteltype"><label for="apartements">апартаменты</label>  
-      </fieldset> 
-          
-     <!-- <fieldset class="hotel-description-price">
-         <legend>стоимость в сутки (р):</legend>
-          
-          <input type="number" id="price"><label for="price">от 0</label>
-          <input type="number" id="price"><label for="price">до 3000</label>
-         
-           <input type="submit" value="Показать">
-          </fieldset>-->
-      </form> 
-         
-        <div class="filter-range">
+    <form action="#" class="hotel-choice clearfix">
+     <div class="filter-range">
       <div class="filter-range-title">Стоимость в сутки (р):</div>
       <div class="price-controls">
         <label class="min-price">от <input type="text" name="min-price" value="0"></label>
@@ -63,7 +38,21 @@
         <div class="range-toggle range-toggle-max"></div>
       </div>
       <button class="btn-transparent" type="submit">Показать</button>
-    </div> 
+     </div> 
+        
+      <fieldset class="hotel-description">
+         <legend>инфраструктура:</legend>
+          <div> <input type="checkbox" id="pool" name="infrastructure" checked><label for="pool">бассейн</label></div>
+          <div> <input type="checkbox" id="parking" name="infrastructure"><label for="parking">парковка</label></div>
+          <div><input type="checkbox" id="wifi" name="infrastructure"><label for="wifi">wi-fi</label> </div> 
+      </fieldset> 
+      <fieldset class="hotel-description">
+         <legend>тип жилья:</legend>
+           <input type="checkbox" id="hotel" name="hoteltype" checked><label for="hotel">гостиница</label><br>
+           <input type="checkbox" id="motel" name="hoteltype" checked><label for="motel">мотель</label><br>
+           <input type="checkbox" id="apartements" name="hoteltype" checked><label for="apartements">апартаменты</label>  
+      </fieldset>          
+     </form>         
       <div class="sorting clearfix">
         <h3 class="sorting-results">найдено:3</h2>
         <h2 class="sorting-type">сортировка:</h2>
@@ -79,51 +68,69 @@
       </ul>    
       </div>
       <section class="hotel-results">
-      <ul>
+      <ul class="clearfix">
           <li class="hotel clearfix">
-             <img src="http://placehold.it" alt="звездочки" class="stars">
-              <div class="hotel-rating">рейтинг:8.5</div>
-              
-              <img src="img/amara.jpg" alt="amara" class="hotel-picture">
-              <span class="hotel-name">amara resort &amp; spa</span>
-              
-              <div class="hotel-price accomodation-type">гостиница</div>
-              <div class="hotel-price roubles">  от 3500 р.</div>
-               <a href="#" type="btn" class="hotel-btn details">подробнее</a>
-              <a href="#" type="btn" class="hotel-btn book">забронировать</a>
-              
+             <img src="img/amara.jpg" alt="amara" class="hotel-picture">
+             <div class="hotel_bottom">
+                <div class="stars">
+                  <ul>
+                     <li>.</li>
+                      <li>.</li>
+                      <li>.</li>
+                     <li>.</li>
+                  </ul>  
+                </div>
+                <div class="hotel-name">amara resort &amp; spa</div>
+                <span class="hotel-price accomodation-type">гостиница</span>
+                <span class="hotel-price roubles">  от 3500 р.</span>
+              </div>  
+              <div class="hotel_top">
+                <div class="hotel-rating">рейтинг:8,5</div>
+                <a href="#" type="btn" class="hotel-btn details">подробнее</a>
+                <a href="#" type="btn" class="hotel-btn book">забронировать</a>
+              </div>
           </li>
           <li class="hotel clearfix">
-             <img src="http://placehold.it" alt="звездочки" class="stars">
-              <div class="hotel-rating">рейтинг:8.9</div>
-               
               <img src="img/desert.jpg" alt="desert" class="hotel-picture">
-              <span class="hotel-name">desert quail inn</span>
-              
-             <div class="hotel-price accomodation-type">мотель</div>
-              <div class="hotel-price roubles">  от 2000 р.</div>                      
-              <a href="#" type="btn" class="hotel-btn details">подробнее</a>
-              <a href="#" type="btn" class="hotel-btn book">забронировать</a>
-              
+              <div class="hotel_bottom">
+                <div class="stars">
+                  <ul>
+                      <li>.</li>
+                      <li>.</li>                      
+                  </ul>  
+                </div>
+                <div class="hotel-name">desert quail inn</div>
+                  <span class="hotel-price accomodation-type">мотель</span>
+                  <span class="hotel-price roubles">  от 2000 р.</span> 
+              </div>
+              <div class="hotel-top">    
+                <div class="hotel-rating">рейтинг:8,9</div>                             
+                <a href="#" type="btn" class="hotel-btn details">подробнее</a>
+                <a href="#" type="btn" class="hotel-btn book">забронировать</a>
+              </div>
           </li>
           <li class="hotel clearfix">
-             <img src="http://placehold.it" alt="звездочки" class="stars">
-              <div class="hotel-rating">рейтинг:9.2</div>
-              
-             <img src="img/villas.jpg" alt="villas" class="hotel-picture">
-              <span class="hotel-name">villas at poco diablo</span>
-              
-             <div class="hotel-price accomodation-type">апартаменты</div>
-              <div class="hotel-price roubles">  от 4000 р.</div>            
-              <a href="#" type="btn" class="hotel-btn details">подробнее</a>
-              <a href="#" type="btn" class="hotel-btn book">забронировать</a>
-              
+              <img src="img/villas.jpg" alt="villas" class="hotel-picture">
+              <div class="hotel-bottom">
+                <div class="stars">
+                  <ul>
+                      <li>.</li>
+                      <li>.</li>
+                      <li>.</li>                      
+                </ul>  
+                </div>
+                <div class="hotel-name">villas at poco diablo</div>
+                  <span class="hotel-price accomodation-type">апартаменты</span>
+                  <span class="hotel-price roubles">  от 4000 р.</span>     
+              </div>
+              <div class="hotel-top">
+                <div class="hotel-rating">рейтинг:9,2</div>
+                <a href="#" type="btn" class="hotel-btn details">подробнее</a>
+                <a href="#" type="btn" class="hotel-btn book">забронировать</a>
+              </div>
           </li>
        </ul>
-      
-      
-      </section>
-          
+      </section>        
     <footer class="main-footer">
         
         <section class="footer-contacts footer-section">
@@ -141,10 +148,7 @@
         </section> 
      </footer>
   </div>   
- </body>
-    
-    
-    
+ </body>   
 </html>
           
       
