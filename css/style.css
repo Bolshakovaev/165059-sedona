@@ -156,12 +156,14 @@ h1, h2,h3 {
 .reason:last-child{
     margin-right: 0;
 }
-.reason h3 { /*тут почему-то это не срабатывает и надписи по середине не выравниваются*/
+/*тут почему-то небольшая площадь - площадь меньше сдвигается?*/
+.reason h3 { 
+    padding-left: 140px;
+    
     width: 120px;
-    margin-left: auto;
-    margin-right: auto;
-   
+    
 }
+/*как сделать черточку черной в reason?*/
 .reason p {
     font-size: 14px;
     color: #686868;
@@ -178,10 +180,12 @@ li.reason>h3::before {
 }
 li.reason>p::before {
    background-color:#eeeeee;
+   
 }
 .reasons .icon p::before {
 	content: ""; 
 } 
+
 .illustrated {
     line-height: 21px;
     color: white;
@@ -323,7 +327,7 @@ icon h3 {
 }
 .interest img {
     position: relative;
-    top: 170px;
+    top: 148px;
 }
 .booking {
     position: absolute;
@@ -349,12 +353,13 @@ icon h3 {
     cursor:pointer;
 }
 
-/*.booking-form {
+.booking-form {
     display: none;
 }
 .booking-form-show {
     display: block;
-}*/
+    animation: bounce 0.6s;
+}
 .booking-form {
     
     padding:  56px 50px;
@@ -383,7 +388,7 @@ icon h3 {
     clear: right;
 }
 
-.booking-form .counter_label {
+.booking-form .counter_label { /*не вставляется значение label и я не знаю, как передвинуть - дети? пробовала через nth-child - но он не работает*/
     float: left;    
 }
 
@@ -399,7 +404,7 @@ icon h3 {
 
 .booking-form .counter {
     float: left;
-    width: 130px;
+    width: 125px;
     margin: 0;
     background-color: #f2f2f2;
     margin-bottom: 55px;
@@ -415,6 +420,25 @@ icon h3 {
 .booking-form .counter input, .counter .minus, .counter .plus {
     width: 40px;
     display: inline-block;
+}
+.counter .minus::before {
+   display: inline-block;
+   content: "\e802";   
+   font-family: "symbols-sedona";
+   font-size: 14px;
+   text-align: left;
+   color: #c2c2c2;
+   vertical-align: top;
+    
+}
+.counter .plus::after {
+   display: inline-block;
+   content: "\e801";   
+   font-family: "symbols-sedona";
+   font-size: 14px;
+   text-align: right;
+   color: #c2c2c2;
+    vertical-align: top;
 }
 
 .booking-form .counter .minus, .booking-form .counter .plus {
@@ -438,11 +462,25 @@ icon h3 {
     background-color: #669ec0;
     color:#88b6d1;
 }
+/* Всплывающая форма */
 
+/*@keyframes bounce {
+  0%   {
+    transform: translateY(-2000px);
+  }
+  70%  {
+    transform: translateY(30px);
+  }
+  90%  {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
  .social-btn .hidden {
      display: none;
 }
-
+*/
 
 
 .sorting {
@@ -767,7 +805,7 @@ icon h3 {
     text-align: left; 
     
 }
-.hotel-name:hover {  /*Саша, а название отеля тоже ссылка получается?*/
+.hotel-name:hover {  
     color: #81b3d2";
 }
 .hotel-name:active {  
