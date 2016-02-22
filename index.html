@@ -22,7 +22,7 @@
       </nav>           
     </header>  
     <main class="content">        
-        <h1  class="slogan">седона &mdash; небольшой городок в аризоне, <br>заслуживающий большего!</h1>        
+        <h1 class="slogan">седона &mdash; небольшой городок в аризоне, <br>заслуживающий большего!</h1>        
         <h2 class="title"> рассмотрим 5 причин, по которым седона круче, чем гранд каньон </h2>
        <ol class="reasons">
            <li class="illustrated illustrated-left clearfix">
@@ -67,19 +67,19 @@
       <article class="booking">
         <h3>поиск гостиницы в седоне</h3>          
         <form class="booking-form clearfix" action="https://echo.htmlacademy.ru" method="post">
-        <input type="date" value="14.02.2016" class="longinput checkin calendar" id="checkin" name="check-in" placeholder="Дата заезда" required> <label for="checkin">Дата заезда:</label> 
-        <input type="date" id="checkout" class="longinput  checkout calendar" name="check-out" value="" placeholder="Дата выезда" required> <label  for="checkout">Дата выезда: </label> 
+        <input type="date" value="" class="longinput checkin calendar" id="checkin" name="check-in"  required> <label for="checkin">Дата заезда:</label> 
+        <input type="date" id="checkout" class="longinput  checkout calendar" name="check-out" value="" required> <label  for="checkout">Дата выезда: </label> 
         <div class="clearfix form-smallerinputs">            
            <label class="counter_label" for="adult">Взрослые: </label> 
            <div class="counter">
                <span class="minus "></span>
-               <input type="number" class="counter_input" id="adult" name="adult" value="2" required>
+               <input type="number" class="counter_input" id="adult" name="adult" value="2">
                <span class="plus"></span>
             </div>
            <label class="counter_label" for="child"> Дети: </label>  
            <div class="counter">
              <span class="minus "></span> 
-             <input type="number" class="counter_input" id="child" value="0" name="children" required>
+             <input type="number" class="counter_input" id="child" value="0" name="children">
              <span class="plus"></span>
            </div>
          </div>
@@ -104,36 +104,7 @@
           <a class="btn" href="#"><img src="img/logohtml.png" alt="логотип"></a>
         </section> 
      </footer>
-   <script>
-var link = document.querySelector(".booking h3");
-var popup = document.querySelector(".booking");
- var form = popup.querySelector("form");
-
-var checkin = popup.querySelector("[name=check-in]");
-
-var checkout = popup.querySelector("[name=check-out]");
-
-
-link.addEventListener("click", function(event) {
-event.preventDefault();
-    
-popup.classList.add("booking-form-show");  
- checkin.focus();   
-});
-  form.addEventListener("submit", function(event) {
-       
-      if (!checkin.value || !checkout.value) {
-          event.preventDefault();
-          console.log("Нужно ввести даты заезда и даты выезда"); 
-        }
-      
-      });
-</script>
-        
-        
-        </body>
-    
-    
-    
-    
+     </div>
+   <script src="js/script.js"></script>             
+     </body>   
 </html>
