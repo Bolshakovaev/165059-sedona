@@ -3,108 +3,109 @@
   <head>
     <meta charset="utf-8">
     <title>Седона главная страница</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:700,400&subset=latin,cyrillic">    
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:700,400&subset=latin,cyrillic">
-    <link rel=""  href="js/script.js">
+    <link rel="stylesheet" href="css/style.css">    
   </head>
   <body>
     <div class="container">
       <header class="main-header">
-      <nav class="main-navigation main">
+        <nav class="main-navigation main">
           <ul class="clearfix">
             <li><a href="#">Информация</a></li>
             <li><a href="#">Фото и видео</a></li>
-            <li class="logo"><a href="#"><img  src="img/logo2.png" alt="логотип" width="138" height="70"></a> </li>
+            <li class="logo"><a href="#"><img  src="img/logo2.png" alt="логотип" width="138" height="70"></a></li>
             <li><a href="#">Карта штата</a></li>
             <li><a href="inner.html">Гостиницы</a></li>
           </ul>             
-      </nav>           
-    </header>  
-    <main class="content">        
-        <h1 class="slogan">седона &mdash; небольшой городок в аризоне, <br>заслуживающий большего!</h1>        
+        </nav>           
+      </header>  
+      <main class="content">        
+        <h1 class="slogan">седона &mdash; небольшой городок в аризоне, заслуживающий большего!</h1>        
         <h2 class="title"> рассмотрим 5 причин, по которым седона круче, чем гранд каньон </h2>
-       <ol class="reasons">
-           <li class="illustrated illustrated-left clearfix">
-              <h3>настоящий городок </h3>              
-               <p>седона не аттракцион для туристов, там течет настоящая жизнь</p>            
-             <ul class="clearfix icons">                    
-                <li class="icon accommodation">
-                   <h3>жилье</h3>
-                   <p> рекомендуем пожить в настоящем мотеле, все как в кино!</p>
-                 </li>  
-                 <li class="icon food">
-                    <h3>еда</h3>
-                    <p> всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
-                  </li>   
-                  <li class="icon souvenirs">
-                    <h3>сувениры</h3>
-                    <p> не только китайского,<br> но и местного производства!</p>
-                  </li> 
-             </ul>
-           </li>           
-         <li class="illustrated illustrated-right clearfix">            
+        <ol class="reasons">
+          <li class="illustrated illustrated-left clearfix">
+            <h3>настоящий городок </h3>              
+            <p>седона не аттракцион для туристов, там течет настоящая жизнь</p>            
+            <ul class="clearfix icons">                    
+              <li class="icon accommodation">
+                <h3>жилье</h3>
+                <p> рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+              </li>  
+              <li class="icon food">
+                <h3>еда</h3>
+                <p> всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+              </li>   
+              <li class="icon souvenirs">
+                <h3>сувениры</h3>
+                <p> не только китайского,<br> но и местного производства!</p>
+              </li> 
+            </ul>
+          </li>           
+          <li class="illustrated illustrated-right clearfix">            
             <h3>там есть<br>мост дьявола</h3>
             <p>да, по нему можно пройти!<br>если конечно вы осмелитесь</p>          
-         </li>           
-         <li class="reason">
+          </li>           
+          <li class="reason">
             <h3>небольшая площадь </h3>
             <p>все достопримечательности находятся очень близко</p>
-         </li>
-         <li class="reason">
+          </li>
+          <li class="reason">
             <h3>красивая дорога</h3>
             <p>ехать в седону из лас-вегаса совсем не скучно!</p>
-         </li>
-         <li class="reason">
+          </li>
+          <li class="reason">
             <h3>мало<br>туристов</h3>
             <p>большинство едет в гранд каньон и толпится там</p>           
-         </li>             
+          </li>             
         </ol>        
-    <div class="interest">        
-        <h2>заинтересовались?</h2>
-        <p>укажите предполагаемые даты поездки, <br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
-        <img src="img/map.png" alt="карта седоны"> 
-      <article class="booking">
-        <h3>поиск гостиницы в седоне</h3>          
-        <form class="booking-form clearfix" action="https://echo.htmlacademy.ru" method="post">
-        <input type="date" value="" class="longinput checkin calendar" id="checkin" name="check-in"  required> <label for="checkin">Дата заезда:</label> 
-        <input type="date" id="checkout" class="longinput  checkout calendar" name="check-out" value="" required> <label  for="checkout">Дата выезда: </label> 
-        <div class="clearfix form-smallerinputs">            
-           <label class="counter_label" for="adult">Взрослые: </label> 
-           <div class="counter">
-               <span class="minus "></span>
-               <input type="number" class="counter_input" id="adult" name="adult" value="2">
-               <span class="plus"></span>
-            </div>
-           <label class="counter_label" for="child"> Дети: </label>  
-           <div class="counter">
-             <span class="minus "></span> 
-             <input type="number" class="counter_input" id="child" value="0" name="children">
-             <span class="plus"></span>
-           </div>
-         </div>
-          <button class="btn" type="submit">найти</button>
-        </form>
-      </article>
-    </div>        
-    </main>
-    <footer class="main-footer index">
-        
-        <section class="footer-contacts footer-section">
+        <div class="interest">        
+          <p class="interest-question">заинтересовались?</p>
+          <p>укажите предполагаемые даты поездки, <br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
+          <div class="map">
+            <img src="img/map.jpg" alt="карта седоны" width="1200" height="564"> 
+          </div>
+          <article class="booking">
+            <h3>поиск гостиницы в седоне</h3>          
+            <form class="booking-form clearfix" action="https://echo.htmlacademy.ru" method="post">
+              <input type="date" value="" class="longinput checkin calendar" id="checkin" name="check-in"  required> 
+              <label for="checkin">Дата заезда:</label> 
+              <input type="date" id="checkout" class="longinput  checkout calendar" name="check-out" value="" required> 
+              <label  for="checkout">Дата выезда: </label> 
+              <div class="clearfix form-smallerinputs">            
+                <label class="counter_label" for="adult">Взрослые: </label> 
+                <div class="counter">
+                  <span class="minus "></span>
+                  <input type="number" class="counter_input" id="adult" name="adult" value="2">
+                  <span class="plus"></span>
+                </div>
+                <label class="counter_label" for="child"> Дети: </label>  
+                <div class="counter">
+                  <span class="minus "></span> 
+                  <input type="number" class="counter_input" id="child" value="0" name="children">
+                  <span class="plus"></span>
+                </div>
+              </div>
+              <button class="btn" type="submit">найти</button>
+            </form>
+          </article>
+        </div>        
+      </main>
+      <footer class="main-footer">        
+        <div class="footer-contacts footer-section">
          #visitsedona
-        </section>
+        </div>
         <section class="footer-social footer-section">
           <a class="social-btn social-btn-tw" href="#">twitter<span class="icon-twitter"></span></a>
           <a class="social-btn social-btn-fb" href="#">facebook<span class="icon-facebook"></span></a>
           <a class="social-btn social-btn-ytub" href="#">youtube<span class="icon-youtube"></span></a>
         </section>
         <section class="footer-copyright footer-section">
-          <span>website by</span>
-          <!-- alt -->
-          <a class="btn" href="#"><img src="img/logohtml.png" alt="логотип"></a>
+          <span class="web">website by</span>          
+          <a class="btn" href="#"><img src="img/logohtml.png" alt="логотип" width="113" height="39"></a>
         </section> 
      </footer>
-     </div>
-   <script src="js/script.js"></script>             
-     </body>   
+    </div>
+  <script src="js/script.js"></script>             
+ </body>   
 </html>
