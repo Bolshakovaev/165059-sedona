@@ -131,7 +131,7 @@ h1.slogan {
 	margin-left: auto;
 	text-align: center;
 	font-size: 14px;
-	color:  #888888;
+	color:  #333333;
 	line-height: 26px;
 	margin-bottom: 60px;
 	position:relative; 
@@ -195,7 +195,7 @@ h1.slogan {
 .reason p {
 	font-size: 14px;
 	line-height: 21px;
-	color: #888888;
+	color: #333333;
 	width: 266px;
 	margin-left: auto;
 	margin-right: auto;
@@ -216,7 +216,8 @@ li.reason>p::before {
 } 
 .illustrated {
 	line-height: 21px;
-	color: white;
+	font-size: 21px;
+    color: white;
 	background-repeat: no-repeat; 
 	background-size:66% auto;
 	text-align: center;    
@@ -294,7 +295,7 @@ li.reason>p::before {
 .icons .icon p{
 	font-size: 14px;
 	line-height: 21px;
-	color: #888888;
+	color: #333333;
 	width:100%; 
 	padding-left:40px; 
 	padding-right:40px; 
@@ -350,7 +351,7 @@ li.reason>p::before {
 .interest p{
 	font-size: 14px;
 	line-height: 24px;
-	color: #888888;
+	color: #333333;
 	font-weight: normal;
 }
 .map {
@@ -407,6 +408,7 @@ li.reason>p::before {
 	box-sizing: border-box;
 	text-transform: uppercase;  
 	line-height: 26px;
+    font-family:"PT Sans", Arial, sans-serif;
 }
 .booking-form label {
 	font-weight: bold;
@@ -465,6 +467,7 @@ input.calendar + label:active{
 	width: 42px;
 	display: inline-block;
 	vertical-align: middle;
+    font-family:inherit;
 }
 .counter .minus::before {
 	display: inline-block;
@@ -653,6 +656,7 @@ color: #81b3d2;
 }
 .hotel-description input[type="checkbox"]{
 	display: none;
+    font-family:inherit;
 }
 .hotel-description input[type="checkbox"]+label::before{
 	content: "\2610";
@@ -722,7 +726,8 @@ color: #81b3d2;
 	font: inherit;
 	background: none;
 	border: none;
-	outline: none;    
+	outline: none;  
+    font-family:inherit;
 }
 
 .range-controls {
